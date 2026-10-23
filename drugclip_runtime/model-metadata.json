@@ -1,0 +1,69 @@
+{
+  "source_commit": "7a3a3fa33673f8668c811790f2e4681c98af44ef",
+  "opset": 14,
+  "encoders": {
+    "molecule": {
+      "domains": [
+        ""
+      ],
+      "nodes": 1965,
+      "pytorch_fp16_example_ms": 15.881798800000979,
+      "dictionary_size": 31,
+      "symbols": [
+        "[PAD]",
+        "[CLS]",
+        "[SEP]",
+        "[UNK]",
+        "C",
+        "N",
+        "O",
+        "S",
+        "H",
+        "Cl",
+        "F",
+        "Br",
+        "I",
+        "Si",
+        "P",
+        "B",
+        "Na",
+        "K",
+        "Al",
+        "Ca",
+        "Sn",
+        "As",
+        "Hg",
+        "Fe",
+        "Zn",
+        "Cr",
+        "Se",
+        "Gd",
+        "Au",
+        "Li",
+        "[MASK]"
+      ],
+      "padding_idx": 0
+    },
+    "pocket": {
+      "domains": [
+        ""
+      ],
+      "nodes": 1965,
+      "pytorch_fp16_example_ms": 15.14965026666649,
+      "dictionary_size": 10,
+      "symbols": [
+        "[PAD]",
+        "[CLS]",
+        "[SEP]",
+        "[UNK]",
+        "C",
+        "N",
+        "O",
+        "S",
+        "H",
+        "[MASK]"
+      ],
+      "padding_idx": 0
+    }
+  }
+}

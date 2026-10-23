@@ -1,6 +1,14 @@
 # DrugCLIP: Contrastive Protein-Molecule Representation Learning for Virtual Screening
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/xxxx/blob/main/LICENSE)
+## Portable inference fork
+
+This fork adds native Windows/Linux ONNX Runtime and NVIDIA TensorRT inference.
+Start with [PORTABLE.md](PORTABLE.md) for setup, model export, engine building,
+LMDB screening and retrieval. See [VALIDATION.md](VALIDATION.md) for measured results.
+`test.sh` and `retrieval.sh` now launch the portable runtime; the original scripts
+are retained as `test-pytorch.sh` and `retrieval-pytorch.sh`. Training is unchanged.
+
+[Code and model licenses](LICENSE)
 [![ArXiv](http://img.shields.io/badge/cs.LG-arXiv%3A2310.06367-B31B1B.svg)](https://arxiv.org/pdf/2310.06367.pdf)
 
 <!-- [[Code](xxxx - Overview)] -->
