@@ -2,6 +2,9 @@
 
 ## Portable inference fork
 
+Linux deployment guides: [fresh installation](docs/linux-fresh-install.md) ·
+[migration from an existing installation](docs/linux-migration.md).
+
 This fork adds native Windows/Linux ONNX Runtime and NVIDIA TensorRT inference.
 Start with [PORTABLE.md](PORTABLE.md) for setup, model export, engine building,
 LMDB screening and retrieval. See [VALIDATION.md](VALIDATION.md) for measured results.

@@ -1,5 +1,8 @@
 # ONNX and TensorRT inference
 
+For step-by-step Linux setup, see [fresh deployment](docs/linux-fresh-install.md)
+or [migration from an existing installation](docs/linux-migration.md).
+
 This fork replaces the default inference launchers with a portable LMDB-to-ranking
 pipeline. It does not require PyTorch or Uni-Core at inference time. Training and
 HomoAug remain upstream code. Original launchers are preserved as
