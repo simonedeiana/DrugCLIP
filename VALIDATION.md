@@ -99,3 +99,8 @@ so they are not an isolated comparison of GPU pocket encoder speed.
 A [clean subset benchmark](benchmarks/results/2026-10-28-clean/REPORT.md)
 now reports both encoders without timed preprocessing or validation. Graph
 outputs remained exact; FP16 differences and per-target rankings are quantified.
+
+
+The [ten-pass expanded benchmark](benchmarks/results/2026-10-28-1000-231/REPORT.md)
+covers all 231 pockets and exactly 1,000 AMPC molecules, with shape grouping
+to keep graph captures outside the timer. See raw samples and numerical checks.

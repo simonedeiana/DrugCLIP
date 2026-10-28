@@ -2,7 +2,9 @@
 
 Start with the [plain-language benchmark history](../docs/benchmark-history.md).
 
-**New:** [clean receptor + molecule benchmark](results/2026-10-28-clean/REPORT.md),
+**Latest:** [1,000 molecules, all 231 pockets, ten timed passes](results/2026-10-28-1000-231/REPORT.md), including all three pairwise performance comparisons and prediction differences.
+
+**Earlier:** [clean receptor + molecule benchmark](results/2026-10-28-clean/REPORT.md),
 with preprocessing and validation outside the timer, plus
 [reproduction scripts](clean/README.md).
 

@@ -86,3 +86,38 @@ graphs for both encoders; the full dataset run enabled them only for molecules.
 See the [clean benchmark report](../benchmarks/results/2026-10-28-clean/REPORT.md)
 for every timing sample, per-target prediction differences, exact selection
 manifest, platform changes, and [reproduction scripts](../benchmarks/clean/README.md).
+
+
+## Expanded ten-pass benchmark: 1,000 molecules and all 231 pockets
+
+The follow-up covers every standard pocket in both datasets, using 1,000 evenly
+spaced AMPC molecule records. Every record is inferred ten measured times.
+Shape groups keep graph memory bounded; three warmups per group, capture,
+preprocessing, validation and scoring are outside the timer. Transfers remain
+included. The ten aggregate samples sum pass indices across groups, rather than
+representing uninterrupted whole-set sweeps. All backends use the same grouping.
+
+| Encoder | PyTorch FP16 / WSL | TensorRT FP32 / Windows | TensorRT + graphs / Windows |
+|---|---:|---:|---:|
+| 1000 molecule records | 1.912337 s | 1.051991 s | 0.981801 s |
+| 231 pocket records | 5.047920 s | 5.432372 s | 5.295009 s |
+
+| Time reduction | Molecules | Pockets |
+|---|---:|---:|
+| tensorrt vs pytorch | +44.99% | -7.62% |
+| cuda-graphs vs pytorch | +48.66% | -4.89% |
+| cuda-graphs vs tensorrt | +6.67% | +2.53% |
+
+Positive means less time; negative means slower. No samples were discarded.
+Mean, median, standard deviation, range, all ten samples and per-shape samples
+are published. OS and precision differ between PyTorch and TensorRT.
+
+Graph embeddings and all 231,000 pairwise predictions matched TensorRT exactly.
+PyTorch's maximum score difference was 0.0039833039,
+minimum target ranking correlation 0.999954076,
+and minimum top-10 set overlap 9/10.
+This tests numerical agreement against all receptors; AMPC molecule labels do
+not measure screening quality for other targets.
+
+See the [complete ten-pass report](../benchmarks/results/2026-10-28-1000-231/REPORT.md)
+and [reproduction scripts](../benchmarks/1000-231/README.md).
