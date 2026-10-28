@@ -1,0 +1,16 @@
+[
+  {
+    "archive": "DUD-E.zip",
+    "url": "https://huggingface.co/datasets/THU-ATOM/DrugCLIP_data/resolve/main/DUD-E.zip?download=true",
+    "sha256": "4541689816c4d53fc55fd2e9d7760e0e45815e414439e8d5b9d63596ae44fe37",
+    "bytes": 6148623196,
+    "lmdb_files": 1833
+  },
+  {
+    "archive": "LIT-PCBA.zip",
+    "url": "https://huggingface.co/datasets/THU-ATOM/DrugCLIP_data/resolve/main/LIT-PCBA.zip?download=true",
+    "sha256": "3ae086998bd295fb40bf6ec1707d68eba9b2e77b2054bde73d90ddee53d38ef0",
+    "bytes": 2763770704,
+    "lmdb_files": 75
+  }
+]

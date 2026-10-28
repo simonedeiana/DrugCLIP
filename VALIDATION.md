@@ -1,4 +1,10 @@
-# Validation on 2026-10-23
+# Validation history
+
+Updated 2026-10-28. Read the [benchmark history](docs/benchmark-history.md)
+and [complete per-target results](benchmarks/README.md). The sections below
+record earlier AMPC release checks; their scope statements apply to that stage.
+
+## Initial validation on 2026-10-23
 
 Machine: NVIDIA RTX 3050 8 GB; native Windows and Ubuntu 22.04 under WSL.
 Source: bowen-gao/DrugCLIP `7a3a3fa33673f8668c811790f2e4681c98af44ef`.
@@ -61,3 +67,25 @@ including model startup). The three unit tests also passed under WSL.
 Training, HomoAug, full DUD-E and PCBA were not run. No training or model quality
 improvement is claimed. FP16/INT8 variants are not shipped because earlier
 forced-precision experiments failed correctness checks.
+
+
+## Completed full-dataset validation
+
+All 117 targets / 4,241,148 molecule records passed in WSL PyTorch FP16,
+Windows TensorRT FP32 and Windows TensorRT with molecule CUDA Graph replay.
+No CPU fallback occurred. Timed sections summed to 10,381.374, 7,031.024 and
+6,839.528 seconds respectively. TensorRT timings include sampled ONNX checks;
+startup, saving and saved-baseline comparisons are excluded. Each full run
+was performed once. Hardware, OS, precision and I/O differences limit causal
+speedup claims between PyTorch and TensorRT.
+
+Every graph embedding and score matched ordinary TensorRT exactly. PyTorch
+was close but not identical: minimum ranking correlation 0.999970972,
+minimum top-1% overlap 97.14%, maximum AUC difference 0.001935747, and changed
+top-1% active counts on three targets. Labels and counts matched. The sampled
+ONNX check covered 9,483 embeddings; maximum difference was 1.1064e-6.
+
+Six alternating graph microbenchmark runs reduced warm molecule time from
+3.150046 to 2.911473 seconds (7.57%). All 363 molecule batches and the pocket
+matched bitwise. An 18-batch eviction/recreation test passed. The full graph
+run was on Windows, not Linux. Model weights and preprocessing were unchanged.

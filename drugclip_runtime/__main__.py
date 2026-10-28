@@ -8,13 +8,14 @@ from pathlib import Path
 import numpy as np
 from scipy.stats import rankdata
 
-from .backends import OnnxEncoder, TensorRTEncoder
+from .backends import OnnxEncoder, TensorRTEncoder, CudaGraphEncoder
 from .data import batches
 
 
 def main():
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument('--backend', choices=['onnx', 'tensorrt'], default='onnx')
+    p.add_argument('--cuda-graphs', action='store_true', help='Cache CUDA graphs for TensorRT molecule inference')
     p.add_argument('--models', type=Path, required=True)
     p.add_argument('--molecules', type=Path, required=True)
     p.add_argument('--pockets', type=Path, required=True)
@@ -24,6 +25,8 @@ def main():
     p.add_argument('--seed', type=int, default=1)
     p.add_argument('--max-pocket-atoms', type=int, default=511)
     a = p.parse_args()
+    if a.cuda_graphs and a.backend != 'tensorrt':
+        p.error('--cuda-graphs requires --backend tensorrt')
     if a.batch_size < 1 or a.max_pocket_atoms < 1:
         p.error('batch-size and max-pocket-atoms must be positive')
     a.output.mkdir(parents=True, exist_ok=True)
@@ -32,7 +35,8 @@ def main():
     embeddings, names, timing = {}, {}, {}
     started = time.perf_counter()
     for kind, path in [('molecule', a.molecules), ('pocket', a.pockets)]:
-        encoder = cls(a.models / (kind + suffix))
+        encoder_cls = CudaGraphEncoder if a.cuda_graphs and kind == 'molecule' else cls
+        encoder = encoder_cls(a.models / (kind + suffix))
         chunks, names[kind] = [], []
         t = time.perf_counter()
         try:
@@ -58,7 +62,7 @@ def main():
         scores = np.maximum(scores, embeddings['molecule'] @ pocket)
     order = np.argsort(-scores, kind='stable')
     labels = [x['label'] for x in names['molecule']]
-    metrics = dict(backend=a.backend, molecules=len(scores), pockets=len(names['pocket']),
+    metrics = dict(backend=a.backend, cuda_graphs=a.cuda_graphs, molecules=len(scores), pockets=len(names['pocket']),
                    seconds_including_startup=time.perf_counter() - started,
                    preprocess_and_inference_seconds=timing, conformer=a.conformer, seed=a.seed,
                    max_pocket_atoms=a.max_pocket_atoms)

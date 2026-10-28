@@ -2,6 +2,12 @@
 
 ## Portable inference fork
 
+Read the [benchmark history](docs/benchmark-history.md) and
+[complete per-target results](benchmarks/README.md). Optional `--cuda-graphs`
+matched ordinary TensorRT exactly across 4.24 million molecule records and
+reduced measured full-screening time by 2.7% on Windows.
+
+
 Linux deployment guides: [fresh installation](docs/linux-fresh-install.md) ·
 [migration from an existing installation](docs/linux-migration.md).
 

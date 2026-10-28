@@ -36,7 +36,8 @@ Open a **new shell** so the old virtualenv/Conda environment and `PYTHONPATH`
 do not leak into the new setup. Follow
 [fresh deployment steps 1–2](linux-fresh-install.md#1-install-prerequisites-and-clone)
 to create a separate `DrugCLIP-portable` checkout, a Python 3.10 `.venv`, and
-verified v0.1.0 ONNX models. Choose another new directory name if that path
+current `main` runtime code and verified v0.1.0 ONNX models. The model archive
+version stays unchanged; the v0.1.0 code tag lacks graph support. Choose another new directory name if that path
 already exists; do not clone over an existing checkout.
 
 The exported release models correspond to the **official checkpoint**. If your
@@ -119,10 +120,40 @@ virtualenv is not a replacement training environment.
    or caching. The supplied AMPC acceptance values are AUC about 0.771345 and
    16 actives in the top 29; other targets need their own acceptance criteria.
 
-Only AMPC inference and the documented unit/export/build checks were validated
-for this release. Full DUD-E, PCBA, training and HomoAug were not run.
+Full DUD-E (102 targets) and LIT-PCBA (15 targets) now passed with PyTorch FP16
+in WSL and TensorRT FP32 on Windows. The Windows graph rerun exactly matched
+every baseline embedding and score. Full graph testing on Linux remains a
+local acceptance step. Training and HomoAug were not run. See the
+[benchmark history](benchmark-history.md).
 
-## 6. Cut over and retain rollback
+## 6. Upgrading an older portable installation
+
+Use the separate-checkout procedure above with current `main` code; retain the
+old checkout for rollback and record the new commit hash. CUDA Graphs require
+no new weights or dependencies. Reuse an engine only when model, OS, GPU and
+TensorRT version are unchanged. Otherwise rebuild it locally.
+
+First run ordinary TensorRT into `results/migration-tensorrt`, then repeat with
+`--cuda-graphs` and `--output results/migration-cuda-graphs`. Compare all arrays:
+
+```bash
+python - <<'PY'
+import numpy as np
+for name in ['molecule-embeddings.npy', 'pocket-embeddings.npy', 'scores.npy']:
+    a = np.load('results/migration-tensorrt/' + name)
+    b = np.load('results/migration-cuda-graphs/' + name)
+    np.testing.assert_allclose(a, b, atol=1e-6, rtol=1e-6)
+    print(name, float(np.max(np.abs(a-b))))
+PY
+```
+
+Benchmark a representative workload before changing scheduled jobs. Capture
+cost and extra GPU memory can outweigh the benefit for short or variable-shape
+inputs. Remove `--cuda-graphs` to roll back this optimization. Capture errors
+stop the graph path instead of silently switching backends. See
+[fresh deployment step 6](linux-fresh-install.md#6-optional-cuda-graphs).
+
+## 7. Cut over and retain rollback
 
 Change your existing job's command to the **new checkout's absolute Python
 path**, set its working directory to the new checkout, and supply explicit

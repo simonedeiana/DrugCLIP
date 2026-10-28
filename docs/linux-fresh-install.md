@@ -24,8 +24,9 @@ mkdir -p "$HOME/apps"
 cd "$HOME/apps"
 git clone https://github.com/simonedeiana/DrugCLIP.git DrugCLIP-portable
 cd DrugCLIP-portable
-# Pin the validated runtime release rather than a changing development branch.
-git switch --detach v0.1.0
+# Current main includes CUDA Graphs; record the exact deployed revision.
+git switch main
+git rev-parse HEAD > deployed-commit.txt
 python3.10 -m venv .venv
 source .venv/bin/activate
 python -m pip install --upgrade pip wheel
@@ -34,9 +35,9 @@ python -m pip check
 python -m unittest discover -s tests
 ```
 
-Run subsequent commands from this checkout with `.venv` activated. The guides
-are published on `main` after v0.1.0; the pinned release contains the runtime,
-`PORTABLE.md` and `VALIDATION.md`, but not these later guide files.
+Run subsequent commands from this checkout with `.venv` activated. CUDA Graph support is on `main`, after v0.1.0. Record the deployed commit for
+reproducibility. The model archive remains v0.1.0: weights are unchanged.
+Checking out the v0.1.0 code tag omits CUDA Graph support.
 
 ## 2. Download and verify the models
 
@@ -173,6 +174,34 @@ The tolerance is a smoke-test threshold, not a universal scientific validation
 criterion. Check task-specific rankings and metrics on your own targets.
 The validated AMPC run had maximum ONNX/TensorRT score error around 1.1e-6.
 Use fresh output directories for separate runs because files are overwritten.
+
+## 6. Optional CUDA Graphs
+
+Add `--cuda-graphs` to the TensorRT command, using the same engines and input
+options, and write to `results/ampc-cuda-graphs`. No additional dependencies or
+engine rebuild are needed solely for this option. Only molecule inference uses
+graphs. The cache holds up to 16 shapes and uses extra GPU memory; capturing
+new shapes adds startup cost. Short jobs may not benefit.
+
+```bash
+python -m drugclip_runtime --backend tensorrt --cuda-graphs --models models/tensorrt --molecules "$MOLS" --pockets "$POCKETS" --batch-size 8 --conformer 0 --seed 1 --max-pocket-atoms 511 --output results/ampc-cuda-graphs
+python - <<'PY'
+import numpy as np
+for name in ['molecule-embeddings.npy', 'pocket-embeddings.npy', 'scores.npy']:
+    a = np.load('results/ampc-tensorrt/' + name)
+    b = np.load('results/ampc-cuda-graphs/' + name)
+    np.testing.assert_allclose(a, b, atol=1e-6, rtol=1e-6)
+    print(name, float(np.max(np.abs(a-b))))
+PY
+```
+
+The full native Windows graph run matched ordinary TensorRT exactly across
+117 targets / 4.24 million records, with 2.7% lower measured full-run time.
+The full graph suite has not been run on Linux: validate agreement and speed
+on your own host. Capture errors are explicit, not silent fallbacks. If capture
+fails, memory is insufficient or performance regresses, omit `--cuda-graphs`.
+See the [benchmark history](benchmark-history.md) and
+[complete results](../benchmarks/README.md).
 
 ## Troubleshooting and repeat runs
 

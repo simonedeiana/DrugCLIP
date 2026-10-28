@@ -1,0 +1,3629 @@
+[
+  {
+    "suite": "DUD-E",
+    "target": "aa2ar",
+    "status": "PASS",
+    "backend": "tensorrt",
+    "molecules": 32010,
+    "actives": 482,
+    "pockets": 1,
+    "roc_auc": 0.9055929735381104,
+    "bedroc_alpha_80_5": 0.5862973994749804,
+    "enrichment_factors": {
+      "0.005": 51.97366047266823,
+      "0.01": 38.6879047582115,
+      "0.02": 24.761588803801114,
+      "0.05": 12.402764351118725
+    },
+    "top_1_percent_actives": 187,
+    "seconds": 52.99920109999948,
+    "preprocessing_and_encoder_seconds": {
+      "molecule": 52.68249780000042,
+      "pocket": 0.2804479000005813
+    },
+    "onnx_sample_max_embedding_error": 4.4889748096466064e-07,
+    "onnx_sample_embeddings": 67,
+    "cpu_fallback_molecules": 0,
+    "max_padded_tokens": {
+      "molecule": 56,
+      "pocket": 224
+    },
+    "preprocessing": "portable conformer=0, seed=1, max_pocket_atoms=511; identical across backends"
+  },
+  {
+    "suite": "DUD-E",
+    "target": "abl1",
+    "status": "PASS",
+    "backend": "tensorrt",
+    "molecules": 10929,
+    "actives": 182,
+    "pockets": 1,
+    "roc_auc": 0.5805330800213093,
+    "bedroc_alpha_80_5": 0.42141147651186167,
+    "enrichment_factors": {
+      "0.005": 36.029670329670324,
+      "0.01": 26.7493006993007,
+      "0.02": 16.451904260123438,
+      "0.05": 7.24545472808727
+    },
+    "top_1_percent_actives": 49,
+    "seconds": 19.78146249999918,
+    "preprocessing_and_encoder_seconds": {
+      "molecule": 19.38146710000001,
+      "pocket": 0.3816588999998203
+    },
+    "onnx_sample_max_embedding_error": 3.650784492492676e-07,
+    "onnx_sample_embeddings": 26,
+    "cpu_fallback_molecules": 0,
+    "max_padded_tokens": {
+      "molecule": 48,
+      "pocket": 280
+    },
+    "preprocessing": "portable conformer=0, seed=1, max_pocket_atoms=511; identical across backends"
+  },
+  {
+    "suite": "DUD-E",
+    "target": "ace",
+    "status": "PASS",
+    "backend": "tensorrt",
+    "molecules": 17173,
+    "actives": 282,
+    "pockets": 1,
+    "roc_auc": 0.9422313952077379,
+    "bedroc_alpha_80_5": 0.6186853280819885,
+    "enrichment_factors": {
+      "0.005": 42.48639287481445,
+      "0.01": 36.82154049150586,
+      "0.02": 27.97020864258618,
+      "0.05": 14.178617723065745
+    },
+    "top_1_percent_actives": 104,
+    "seconds": 28.791607200000726,
+    "preprocessing_and_encoder_seconds": {
+      "molecule": 28.05377950000002,
+      "pocket": 0.7158906000004208
+    },
+    "onnx_sample_max_embedding_error": 4.3958425521850586e-07,
+    "onnx_sample_embeddings": 46,
+    "cpu_fallback_molecules": 0,
+    "max_padded_tokens": {
+      "molecule": 48,
+      "pocket": 392
+    },
+    "preprocessing": "portable conformer=0, seed=1, max_pocket_atoms=511; identical across backends"
+  },
+  {
+    "suite": "DUD-E",
+    "target": "aces",
+    "status": "PASS",
+    "backend": "tensorrt",
+    "molecules": 26691,
+    "actives": 453,
+    "pockets": 1,
+    "roc_auc": 0.8441628819027456,
+    "bedroc_alpha_80_5": 0.5582630936139293,
+    "enrichment_factors": {
+      "0.005": 43.97054462785411,
+      "0.01": 35.5288587940571,
+      "0.02": 23.060656794900417,
+      "0.05": 12.004782101842896
+    },
+    "top_1_percent_actives": 161,
+    "seconds": 46.012278199999855,
+    "preprocessing_and_encoder_seconds": {
+      "molecule": 45.51607680000052,
+      "pocket": 0.46367730000019947
+    },
+    "onnx_sample_max_embedding_error": 5.178153514862061e-07,
+    "onnx_sample_embeddings": 60,
+    "cpu_fallback_molecules": 0,
+    "max_padded_tokens": {
+      "molecule": 56,
+      "pocket": 312
+    },
+    "preprocessing": "portable conformer=0, seed=1, max_pocket_atoms=511; identical across backends"
+  },
+  {
+    "suite": "DUD-E",
+    "target": "ada",
+    "status": "PASS",
+    "backend": "tensorrt",
+    "molecules": 5543,
+    "actives": 93,
+    "pockets": 1,
+    "roc_auc": 0.9861734240899674,
+    "bedroc_alpha_80_5": 0.9141942231805014,
+    "enrichment_factors": {
+      "0.005": 59.60215053763441,
+      "0.01": 59.60215053763441,
+      "0.02": 41.88259226968905,
+      "0.05": 17.580490446352595
+    },
+    "top_1_percent_actives": 56,
+    "seconds": 8.970329699999638,
+    "preprocessing_and_encoder_seconds": {
+      "molecule": 8.522930699999051,
+      "pocket": 0.43917490000058024
+    },
+    "onnx_sample_max_embedding_error": 4.76837158203125e-07,
+    "onnx_sample_embeddings": 24,
+    "cpu_fallback_molecules": 0,
+    "max_padded_tokens": {
+      "molecule": 48,
+      "pocket": 296
+    },
+    "preprocessing": "portable conformer=0, seed=1, max_pocket_atoms=511; identical across backends"
+  },
+  {
+    "suite": "DUD-E",
+    "target": "ada17",
+    "status": "PASS",
+    "backend": "tensorrt",
+    "molecules": 36426,
+    "actives": 532,
+    "pockets": 1,
+    "roc_auc": 0.9886257614840019,
+    "bedroc_alpha_80_5": 0.8745100884334878,
+    "enrichment_factors": {
+      "0.005": 68.46992481203007,
+      "0.01": 62.467082088783606,
+      "0.02": 40.762616417587175,
+      "0.05": 18.338816305307727
+    },
+    "top_1_percent_actives": 333,
+    "seconds": 63.34263319999991,
+    "preprocessing_and_encoder_seconds": {
+      "molecule": 63.024165199998606,
+      "pocket": 0.28437510000003385
+    },
+    "onnx_sample_max_embedding_error": 5.289912223815918e-07,
+    "onnx_sample_embeddings": 75,
+    "cpu_fallback_molecules": 0,
+    "max_padded_tokens": {
+      "molecule": 56,
+      "pocket": 232
+    },
+    "preprocessing": "portable conformer=0, seed=1, max_pocket_atoms=511; identical across backends"
+  },
+  {
+    "suite": "DUD-E",
+    "target": "adrb1",
+    "status": "PASS",
+    "backend": "tensorrt",
+    "molecules": 16095,
+    "actives": 247,
+    "pockets": 1,
+    "roc_auc": 0.8276194699851014,
+    "bedroc_alpha_80_5": 0.35864769921118905,
+    "enrichment_factors": {
+      "0.005": 27.351926825611038,
+      "0.01": 23.069756330625893,
+      "0.02": 14.772738702944652,
+      "0.05": 8.904116478487188
+    },
+    "top_1_percent_actives": 57,
+    "seconds": 27.69188899999972,
+    "preprocessing_and_encoder_seconds": {
+      "molecule": 27.259595399998943,
+      "pocket": 0.4112982999995438
+    },
+    "onnx_sample_max_embedding_error": 4.76837158203125e-07,
+    "onnx_sample_embeddings": 40,
+    "cpu_fallback_molecules": 0,
+    "max_padded_tokens": {
+      "molecule": 48,
+      "pocket": 288
+    },
+    "preprocessing": "portable conformer=0, seed=1, max_pocket_atoms=511; identical across backends"
+  },
+  {
+    "suite": "DUD-E",
+    "target": "adrb2",
+    "status": "PASS",
+    "backend": "tensorrt",
+    "molecules": 15230,
+    "actives": 231,
+    "pockets": 1,
+    "roc_auc": 0.7941770432603155,
+    "bedroc_alpha_80_5": 0.3548015545894331,
+    "enrichment_factors": {
+      "0.005": 31.681002979704278,
+      "0.01": 22.838751662281073,
+      "0.02": 14.915477964658292,
+      "0.05": 8.392757723466385
+    },
+    "top_1_percent_actives": 53,
+    "seconds": 26.639593500000046,
+    "preprocessing_and_encoder_seconds": {
+      "molecule": 26.244048599999587,
+      "pocket": 0.38115560000005644
+    },
+    "onnx_sample_max_embedding_error": 5.066394805908203e-07,
+    "onnx_sample_embeddings": 39,
+    "cpu_fallback_molecules": 0,
+    "max_padded_tokens": {
+      "molecule": 48,
+      "pocket": 280
+    },
+    "preprocessing": "portable conformer=0, seed=1, max_pocket_atoms=511; identical across backends"
+  },
+  {
+    "suite": "DUD-E",
+    "target": "akt1",
+    "status": "PASS",
+    "backend": "tensorrt",
+    "molecules": 16740,
+    "actives": 293,
+    "pockets": 1,
+    "roc_auc": 0.805006296987469,
+    "bedroc_alpha_80_5": 0.2506293848949781,
+    "enrichment_factors": {
+      "0.005": 15.643588493417845,
+      "0.01": 13.603120429058995,
+      "0.02": 10.744434822474657,
+      "0.05": 7.030716723549488
+    },
+    "top_1_percent_actives": 40,
+    "seconds": 29.46464730000116,
+    "preprocessing_and_encoder_seconds": {
+      "molecule": 29.186244499998793,
+      "pocket": 0.2617050000008021
+    },
+    "onnx_sample_max_embedding_error": 5.476176738739014e-07,
+    "onnx_sample_embeddings": 45,
+    "cpu_fallback_molecules": 0,
+    "max_padded_tokens": {
+      "molecule": 56,
+      "pocket": 216
+    },
+    "preprocessing": "portable conformer=0, seed=1, max_pocket_atoms=511; identical across backends"
+  },
+  {
+    "suite": "DUD-E",
+    "target": "akt2",
+    "status": "PASS",
+    "backend": "tensorrt",
+    "molecules": 7013,
+    "actives": 117,
+    "pockets": 1,
+    "roc_auc": 0.5363111527554683,
+    "bedroc_alpha_80_5": 0.08207851443438394,
+    "enrichment_factors": {
+      "0.005": 3.3300094966761633,
+      "0.01": 3.3769110388828696,
+      "0.02": 3.8259683578832515,
+      "0.05": 3.073854920008766
+    },
+    "top_1_percent_actives": 4,
+    "seconds": 12.933911099999023,
+    "preprocessing_and_encoder_seconds": {
+      "molecule": 12.468302700001004,
+      "pocket": 0.4539755999994668
+    },
+    "onnx_sample_max_embedding_error": 4.5821070671081543e-07,
+    "onnx_sample_embeddings": 22,
+    "cpu_fallback_molecules": 0,
+    "max_padded_tokens": {
+      "molecule": 48,
+      "pocket": 312
+    },
+    "preprocessing": "portable conformer=0, seed=1, max_pocket_atoms=511; identical across backends"
+  },
+  {
+    "suite": "DUD-E",
+    "target": "aldr",
+    "status": "PASS",
+    "backend": "tensorrt",
+    "molecules": 9154,
+    "actives": 159,
+    "pockets": 1,
+    "roc_auc": 0.44942508241825474,
+    "bedroc_alpha_80_5": 0.015125739962360146,
+    "enrichment_factors": {
+      "0.005": 1.251572327044025,
+      "0.01": 1.251572327044025,
+      "0.02": 0.6257861635220126,
+      "0.05": 0.5028150833539314
+    },
+    "top_1_percent_actives": 2,
+    "seconds": 14.660482100000081,
+    "preprocessing_and_encoder_seconds": {
+      "molecule": 14.123312499999884,
+      "pocket": 0.5293216999998549
+    },
+    "onnx_sample_max_embedding_error": 3.9208680391311646e-07,
+    "onnx_sample_embeddings": 27,
+    "cpu_fallback_molecules": 0,
+    "max_padded_tokens": {
+      "molecule": 48,
+      "pocket": 336
+    },
+    "preprocessing": "portable conformer=0, seed=1, max_pocket_atoms=511; identical across backends"
+  },
+  {
+    "suite": "DUD-E",
+    "target": "ampc",
+    "status": "PASS",
+    "backend": "tensorrt",
+    "molecules": 2898,
+    "actives": 48,
+    "pockets": 1,
+    "roc_auc": 0.7713450292397661,
+    "bedroc_alpha_80_5": 0.49563309727818006,
+    "enrichment_factors": {
+      "0.005": 52.324999999999996,
+      "0.01": 33.310344827586206,
+      "0.02": 17.69612068965517,
+      "0.05": 9.160344827586206
+    },
+    "top_1_percent_actives": 16,
+    "seconds": 4.683596499999112,
+    "preprocessing_and_encoder_seconds": {
+      "molecule": 4.402976299999864,
+      "pocket": 0.2769655000010971
+    },
+    "onnx_sample_max_embedding_error": 4.246830940246582e-07,
+    "onnx_sample_embeddings": 11,
+    "cpu_fallback_molecules": 0,
+    "max_padded_tokens": {
+      "molecule": 40,
+      "pocket": 224
+    },
+    "preprocessing": "portable conformer=0, seed=1, max_pocket_atoms=511; identical across backends"
+  },
+  {
+    "suite": "DUD-E",
+    "target": "andr",
+    "status": "PASS",
+    "backend": "tensorrt",
+    "molecules": 14615,
+    "actives": 268,
+    "pockets": 1,
+    "roc_auc": 0.9071091361343419,
+    "bedroc_alpha_80_5": 0.6390364398272361,
+    "enrichment_factors": {
+      "0.005": 48.63805970149254,
+      "0.01": 37.8396283886689,
+      "0.02": 25.870880240436048,
+      "0.05": 13.428241827796722
+    },
+    "top_1_percent_actives": 102,
+    "seconds": 23.284843100000217,
+    "preprocessing_and_encoder_seconds": {
+      "molecule": 22.891128299999764,
+      "pocket": 0.3710566000008839
+    },
+    "onnx_sample_max_embedding_error": 4.880130290985107e-07,
+    "onnx_sample_embeddings": 40,
+    "cpu_fallback_molecules": 0,
+    "max_padded_tokens": {
+      "molecule": 48,
+      "pocket": 272
+    },
+    "preprocessing": "portable conformer=0, seed=1, max_pocket_atoms=511; identical across backends"
+  },
+  {
+    "suite": "DUD-E",
+    "target": "aofb",
+    "status": "PASS",
+    "backend": "tensorrt",
+    "molecules": 7012,
+    "actives": 122,
+    "pockets": 1,
+    "roc_auc": 0.6152252016464822,
+    "bedroc_alpha_80_5": 0.09810799837029448,
+    "enrichment_factors": {
+      "0.005": 6.38615664845173,
+      "0.01": 4.857076887554837,
+      "0.02": 4.483897221253343,
+      "0.05": 2.783709308299472
+    },
+    "top_1_percent_actives": 6,
+    "seconds": 10.523872899999333,
+    "preprocessing_and_encoder_seconds": {
+      "molecule": 10.14513259999876,
+      "pocket": 0.3668042000008427
+    },
+    "onnx_sample_max_embedding_error": 4.6193599700927734e-07,
+    "onnx_sample_embeddings": 21,
+    "cpu_fallback_molecules": 0,
+    "max_padded_tokens": {
+      "molecule": 48,
+      "pocket": 272
+    },
+    "preprocessing": "portable conformer=0, seed=1, max_pocket_atoms=511; identical across backends"
+  },
+  {
+    "suite": "DUD-E",
+    "target": "bace1",
+    "status": "PASS",
+    "backend": "tensorrt",
+    "molecules": 18380,
+    "actives": 283,
+    "pockets": 1,
+    "roc_auc": 0.9385445648118083,
+    "bedroc_alpha_80_5": 0.6305852562122138,
+    "enrichment_factors": {
+      "0.005": 56.47564910124443,
+      "0.01": 39.88592717775388,
+      "0.02": 25.94350130588416,
+      "0.05": 14.558303886925795
+    },
+    "top_1_percent_actives": 113,
+    "seconds": 33.939902500000244,
+    "preprocessing_and_encoder_seconds": {
+      "molecule": 33.56239529999948,
+      "pocket": 0.3584731999999349
+    },
+    "onnx_sample_max_embedding_error": 4.954636096954346e-07,
+    "onnx_sample_embeddings": 45,
+    "cpu_fallback_molecules": 0,
+    "max_padded_tokens": {
+      "molecule": 48,
+      "pocket": 264
+    },
+    "preprocessing": "portable conformer=0, seed=1, max_pocket_atoms=511; identical across backends"
+  },
+  {
+    "suite": "DUD-E",
+    "target": "braf",
+    "status": "PASS",
+    "backend": "tensorrt",
+    "molecules": 10099,
+    "actives": 152,
+    "pockets": 1,
+    "roc_auc": 0.7737323604577947,
+    "bedroc_alpha_80_5": 0.5144910144763013,
+    "enrichment_factors": {
+      "0.005": 56.018704850361196,
+      "0.01": 34.86496873371548,
+      "0.02": 20.39271756122981,
+      "0.05": 9.20961438249088
+    },
+    "top_1_percent_actives": 53,
+    "seconds": 18.237100700000155,
+    "preprocessing_and_encoder_seconds": {
+      "molecule": 17.8595576000007,
+      "pocket": 0.3603356999992684
+    },
+    "onnx_sample_max_embedding_error": 4.6193599700927734e-07,
+    "onnx_sample_embeddings": 28,
+    "cpu_fallback_molecules": 0,
+    "max_padded_tokens": {
+      "molecule": 48,
+      "pocket": 256
+    },
+    "preprocessing": "portable conformer=0, seed=1, max_pocket_atoms=511; identical across backends"
+  },
+  {
+    "suite": "DUD-E",
+    "target": "cah2",
+    "status": "PASS",
+    "backend": "tensorrt",
+    "molecules": 31652,
+    "actives": 492,
+    "pockets": 1,
+    "roc_auc": 0.728844666134402,
+    "bedroc_alpha_80_5": 0.07084462971152684,
+    "enrichment_factors": {
+      "0.005": 5.664570230607966,
+      "0.01": 3.4500525762355414,
+      "0.02": 2.5368033648790744,
+      "0.05": 2.5603284902084646
+    },
+    "top_1_percent_actives": 17,
+    "seconds": 53.27929530000074,
+    "preprocessing_and_encoder_seconds": {
+      "molecule": 53.084711000001334,
+      "pocket": 0.15740910000022268
+    },
+    "onnx_sample_max_embedding_error": 8.028000593185425e-07,
+    "onnx_sample_embeddings": 69,
+    "cpu_fallback_molecules": 0,
+    "max_padded_tokens": {
+      "molecule": 56,
+      "pocket": 152
+    },
+    "preprocessing": "portable conformer=0, seed=1, max_pocket_atoms=511; identical across backends"
+  },
+  {
+    "suite": "DUD-E",
+    "target": "casp3",
+    "status": "PASS",
+    "backend": "tensorrt",
+    "molecules": 10894,
+    "actives": 199,
+    "pockets": 1,
+    "roc_auc": 0.8766107301350136,
+    "bedroc_alpha_80_5": 0.29792593691105207,
+    "enrichment_factors": {
+      "0.005": 17.91612608497031,
+      "0.01": 16.071550412613526,
+      "0.02": 11.80254483426306,
+      "0.05": 8.939799917016273
+    },
+    "top_1_percent_actives": 32,
+    "seconds": 19.22505699999965,
+    "preprocessing_and_encoder_seconds": {
+      "molecule": 19.01056459999927,
+      "pocket": 0.20366130000002158
+    },
+    "onnx_sample_max_embedding_error": 4.5821070671081543e-07,
+    "onnx_sample_embeddings": 31,
+    "cpu_fallback_molecules": 0,
+    "max_padded_tokens": {
+      "molecule": 56,
+      "pocket": 184
+    },
+    "preprocessing": "portable conformer=0, seed=1, max_pocket_atoms=511; identical across backends"
+  },
+  {
+    "suite": "DUD-E",
+    "target": "cdk2",
+    "status": "PASS",
+    "backend": "tensorrt",
+    "molecules": 28320,
+    "actives": 474,
+    "pockets": 1,
+    "roc_auc": 0.7462210027362671,
+    "bedroc_alpha_80_5": 0.389884583595847,
+    "enrichment_factors": {
+      "0.005": 34.50169370654306,
+      "0.01": 22.720627562845426,
+      "0.02": 14.85767865514701,
+      "0.05": 8.649789029535865
+    },
+    "top_1_percent_actives": 108,
+    "seconds": 47.67228780000005,
+    "preprocessing_and_encoder_seconds": {
+      "molecule": 47.28464499999973,
+      "pocket": 0.3552604999986215
+    },
+    "onnx_sample_max_embedding_error": 6.258487701416016e-07,
+    "onnx_sample_embeddings": 65,
+    "cpu_fallback_molecules": 0,
+    "max_padded_tokens": {
+      "molecule": 48,
+      "pocket": 264
+    },
+    "preprocessing": "portable conformer=0, seed=1, max_pocket_atoms=511; identical across backends"
+  },
+  {
+    "suite": "DUD-E",
+    "target": "comt",
+    "status": "PASS",
+    "backend": "tensorrt",
+    "molecules": 3889,
+    "actives": 41,
+    "pockets": 1,
+    "roc_auc": 0.9943144363876071,
+    "bedroc_alpha_80_5": 0.8707619723659378,
+    "enrichment_factors": {
+      "0.005": 94.85365853658537,
+      "0.01": 70.5322076297686,
+      "0.02": 43.77861163227017,
+      "0.05": 19.45716072545341
+    },
+    "top_1_percent_actives": 29,
+    "seconds": 6.064855399999942,
+    "preprocessing_and_encoder_seconds": {
+      "molecule": 5.869378100000176,
+      "pocket": 0.19059589999960735
+    },
+    "onnx_sample_max_embedding_error": 7.487833499908447e-07,
+    "onnx_sample_embeddings": 10,
+    "cpu_fallback_molecules": 0,
+    "max_padded_tokens": {
+      "molecule": 40,
+      "pocket": 184
+    },
+    "preprocessing": "portable conformer=0, seed=1, max_pocket_atoms=511; identical across backends"
+  },
+  {
+    "suite": "DUD-E",
+    "target": "cp2c9",
+    "status": "PASS",
+    "backend": "tensorrt",
+    "molecules": 7569,
+    "actives": 120,
+    "pockets": 1,
+    "roc_auc": 0.5371716561507137,
+    "bedroc_alpha_80_5": 0.014153335124714018,
+    "enrichment_factors": {
+      "0.005": 0.0,
+      "0.01": 0.0,
+      "0.02": 0.8299342105263158,
+      "0.05": 0.9985488126649076
+    },
+    "top_1_percent_actives": 0,
+    "seconds": 13.392368099999658,
+    "preprocessing_and_encoder_seconds": {
+      "molecule": 13.084122800000841,
+      "pocket": 0.2974881000009191
+    },
+    "onnx_sample_max_embedding_error": 3.8743019104003906e-07,
+    "onnx_sample_embeddings": 18,
+    "cpu_fallback_molecules": 0,
+    "max_padded_tokens": {
+      "molecule": 48,
+      "pocket": 240
+    },
+    "preprocessing": "portable conformer=0, seed=1, max_pocket_atoms=511; identical across backends"
+  },
+  {
+    "suite": "DUD-E",
+    "target": "cp3a4",
+    "status": "PASS",
+    "backend": "tensorrt",
+    "molecules": 11968,
+    "actives": 170,
+    "pockets": 1,
+    "roc_auc": 0.512632749319426,
+    "bedroc_alpha_80_5": 0.011174949972230199,
+    "enrichment_factors": {
+      "0.005": 0.0,
+      "0.01": 0.5866666666666667,
+      "0.02": 0.5866666666666667,
+      "0.05": 0.7051752921535893
+    },
+    "top_1_percent_actives": 1,
+    "seconds": 21.981424599998718,
+    "preprocessing_and_encoder_seconds": {
+      "molecule": 21.259514200000922,
+      "pocket": 0.7101676999991469
+    },
+    "onnx_sample_max_embedding_error": 4.7497451305389404e-07,
+    "onnx_sample_embeddings": 33,
+    "cpu_fallback_molecules": 0,
+    "max_padded_tokens": {
+      "molecule": 48,
+      "pocket": 400
+    },
+    "preprocessing": "portable conformer=0, seed=1, max_pocket_atoms=511; identical across backends"
+  },
+  {
+    "suite": "DUD-E",
+    "target": "csf1r",
+    "status": "PASS",
+    "backend": "tensorrt",
+    "molecules": 12309,
+    "actives": 166,
+    "pockets": 1,
+    "roc_auc": 0.6035536364348938,
+    "bedroc_alpha_80_5": 0.3264528573847401,
+    "enrichment_factors": {
+      "0.005": 32.29139137193937,
+      "0.01": 22.723571706179555,
+      "0.02": 14.409833666650407,
+      "0.05": 6.981712564543891
+    },
+    "top_1_percent_actives": 38,
+    "seconds": 21.88030080000135,
+    "preprocessing_and_encoder_seconds": {
+      "molecule": 21.601066100000025,
+      "pocket": 0.2628499999991618
+    },
+    "onnx_sample_max_embedding_error": 4.917383193969727e-07,
+    "onnx_sample_embeddings": 38,
+    "cpu_fallback_molecules": 0,
+    "max_padded_tokens": {
+      "molecule": 48,
+      "pocket": 224
+    },
+    "preprocessing": "portable conformer=0, seed=1, max_pocket_atoms=511; identical across backends"
+  },
+  {
+    "suite": "DUD-E",
+    "target": "cxcr4",
+    "status": "PASS",
+    "backend": "tensorrt",
+    "molecules": 3446,
+    "actives": 40,
+    "pockets": 1,
+    "roc_auc": 0.728897533763946,
+    "bedroc_alpha_80_5": 0.3887769959353251,
+    "enrichment_factors": {
+      "0.005": 38.28888888888889,
+      "0.01": 29.537142857142857,
+      "0.02": 17.479710144927537,
+      "0.05": 6.971676300578035
+    },
+    "top_1_percent_actives": 12,
+    "seconds": 6.18842020000011,
+    "preprocessing_and_encoder_seconds": {
+      "molecule": 5.796812099999443,
+      "pocket": 0.3858662999991793
+    },
+    "onnx_sample_max_embedding_error": 5.662441253662109e-07,
+    "onnx_sample_embeddings": 15,
+    "cpu_fallback_molecules": 0,
+    "max_padded_tokens": {
+      "molecule": 48,
+      "pocket": 280
+    },
+    "preprocessing": "portable conformer=0, seed=1, max_pocket_atoms=511; identical across backends"
+  },
+  {
+    "suite": "DUD-E",
+    "target": "def",
+    "status": "PASS",
+    "backend": "tensorrt",
+    "molecules": 5798,
+    "actives": 102,
+    "pockets": 1,
+    "roc_auc": 0.9978123623044723,
+    "bedroc_alpha_80_5": 0.9907390710951519,
+    "enrichment_factors": {
+      "0.005": 56.84313725490196,
+      "0.01": 56.84313725490196,
+      "0.02": 49.0027045300879,
+      "0.05": 19.79709263015551
+    },
+    "top_1_percent_actives": 58,
+    "seconds": 10.03827960000126,
+    "preprocessing_and_encoder_seconds": {
+      "molecule": 9.721112399998674,
+      "pocket": 0.3104285000008531
+    },
+    "onnx_sample_max_embedding_error": 3.501772880554199e-07,
+    "onnx_sample_embeddings": 23,
+    "cpu_fallback_molecules": 0,
+    "max_padded_tokens": {
+      "molecule": 48,
+      "pocket": 240
+    },
+    "preprocessing": "portable conformer=0, seed=1, max_pocket_atoms=511; identical across backends"
+  },
+  {
+    "suite": "DUD-E",
+    "target": "dhi1",
+    "status": "PASS",
+    "backend": "tensorrt",
+    "molecules": 19675,
+    "actives": 330,
+    "pockets": 1,
+    "roc_auc": 0.4698242439906953,
+    "bedroc_alpha_80_5": 0.006037793534478547,
+    "enrichment_factors": {
+      "0.005": 0.0,
+      "0.01": 0.0,
+      "0.02": 0.15132287340409167,
+      "0.05": 0.7876786154225178
+    },
+    "top_1_percent_actives": 0,
+    "seconds": 32.87824790000013,
+    "preprocessing_and_encoder_seconds": {
+      "molecule": 32.40740689999984,
+      "pocket": 0.44974919999913254
+    },
+    "onnx_sample_max_embedding_error": 4.917383193969727e-07,
+    "onnx_sample_embeddings": 44,
+    "cpu_fallback_molecules": 0,
+    "max_padded_tokens": {
+      "molecule": 48,
+      "pocket": 304
+    },
+    "preprocessing": "portable conformer=0, seed=1, max_pocket_atoms=511; identical across backends"
+  },
+  {
+    "suite": "DUD-E",
+    "target": "dpp4",
+    "status": "PASS",
+    "backend": "tensorrt",
+    "molecules": 41459,
+    "actives": 533,
+    "pockets": 1,
+    "roc_auc": 0.9727579517289201,
+    "bedroc_alpha_80_5": 0.780325290278621,
+    "enrichment_factors": {
+      "0.005": 65.8174339731563,
+      "0.01": 56.2295711928389,
+      "0.02": 38.048676507154326,
+      "0.05": 17.598074592568256
+    },
+    "top_1_percent_actives": 300,
+    "seconds": 66.725043800001,
+    "preprocessing_and_encoder_seconds": {
+      "molecule": 66.33647040000142,
+      "pocket": 0.3487215000004653
+    },
+    "onnx_sample_max_embedding_error": 4.76837158203125e-07,
+    "onnx_sample_embeddings": 92,
+    "cpu_fallback_molecules": 0,
+    "max_padded_tokens": {
+      "molecule": 48,
+      "pocket": 264
+    },
+    "preprocessing": "portable conformer=0, seed=1, max_pocket_atoms=511; identical across backends"
+  },
+  {
+    "suite": "DUD-E",
+    "target": "drd3",
+    "status": "PASS",
+    "backend": "tensorrt",
+    "molecules": 34518,
+    "actives": 480,
+    "pockets": 1,
+    "roc_auc": 0.6348175201245667,
+    "bedroc_alpha_80_5": 0.08462506054604789,
+    "enrichment_factors": {
+      "0.005": 5.819508670520231,
+      "0.01": 4.364631502890173,
+      "0.02": 4.3709479015918955,
+      "0.05": 2.874833429895713
+    },
+    "top_1_percent_actives": 21,
+    "seconds": 58.77850439999929,
+    "preprocessing_and_encoder_seconds": {
+      "molecule": 58.33323200000086,
+      "pocket": 0.4090090000008786
+    },
+    "onnx_sample_max_embedding_error": 5.513429641723633e-07,
+    "onnx_sample_embeddings": 79,
+    "cpu_fallback_molecules": 0,
+    "max_padded_tokens": {
+      "molecule": 48,
+      "pocket": 288
+    },
+    "preprocessing": "portable conformer=0, seed=1, max_pocket_atoms=511; identical across backends"
+  },
+  {
+    "suite": "DUD-E",
+    "target": "dyr",
+    "status": "PASS",
+    "backend": "tensorrt",
+    "molecules": 17423,
+    "actives": 231,
+    "pockets": 1,
+    "roc_auc": 0.9774311116214327,
+    "bedroc_alpha_80_5": 0.7826900116517318,
+    "enrichment_factors": {
+      "0.005": 68.56749311294766,
+      "0.01": 55.59844155844156,
+      "0.02": 37.387948250412435,
+      "0.05": 17.55862524325827
+    },
+    "top_1_percent_actives": 129,
+    "seconds": 29.184226999999737,
+    "preprocessing_and_encoder_seconds": {
+      "molecule": 28.639531599999827,
+      "pocket": 0.5263691999989533
+    },
+    "onnx_sample_max_embedding_error": 6.854534149169922e-07,
+    "onnx_sample_embeddings": 48,
+    "cpu_fallback_molecules": 0,
+    "max_padded_tokens": {
+      "molecule": 48,
+      "pocket": 336
+    },
+    "preprocessing": "portable conformer=0, seed=1, max_pocket_atoms=511; identical across backends"
+  },
+  {
+    "suite": "DUD-E",
+    "target": "egfr",
+    "status": "PASS",
+    "backend": "tensorrt",
+    "molecules": 35584,
+    "actives": 542,
+    "pockets": 1,
+    "roc_auc": 0.7845877514194353,
+    "bedroc_alpha_80_5": 0.537622593955992,
+    "enrichment_factors": {
+      "0.005": 59.382893154774244,
+      "0.01": 35.59285210829636,
+      "0.02": 20.654919358182347,
+      "0.05": 9.958621833409344
+    },
+    "top_1_percent_actives": 193,
+    "seconds": 63.6746263999994,
+    "preprocessing_and_encoder_seconds": {
+      "molecule": 63.17287579999902,
+      "pocket": 0.4639313999996375
+    },
+    "onnx_sample_max_embedding_error": 6.146728992462158e-07,
+    "onnx_sample_embeddings": 81,
+    "cpu_fallback_molecules": 0,
+    "max_padded_tokens": {
+      "molecule": 48,
+      "pocket": 312
+    },
+    "preprocessing": "portable conformer=0, seed=1, max_pocket_atoms=511; identical across backends"
+  },
+  {
+    "suite": "DUD-E",
+    "target": "esr1",
+    "status": "PASS",
+    "backend": "tensorrt",
+    "molecules": 21060,
+    "actives": 382,
+    "pockets": 1,
+    "roc_auc": 0.9595035875445437,
+    "bedroc_alpha_80_5": 0.7860566152416798,
+    "enrichment_factors": {
+      "0.005": 55.13089005235602,
+      "0.01": 50.42778094836357,
+      "0.02": 32.399196049725816,
+      "0.05": 15.026178010471204
+    },
+    "top_1_percent_actives": 193,
+    "seconds": 36.93203600000015,
+    "preprocessing_and_encoder_seconds": {
+      "molecule": 36.33689830000003,
+      "pocket": 0.5695924999999988
+    },
+    "onnx_sample_max_embedding_error": 5.280598998069763e-07,
+    "onnx_sample_embeddings": 53,
+    "cpu_fallback_molecules": 0,
+    "max_padded_tokens": {
+      "molecule": 48,
+      "pocket": 352
+    },
+    "preprocessing": "portable conformer=0, seed=1, max_pocket_atoms=511; identical across backends"
+  },
+  {
+    "suite": "DUD-E",
+    "target": "esr2",
+    "status": "PASS",
+    "backend": "tensorrt",
+    "molecules": 20556,
+    "actives": 366,
+    "pockets": 1,
+    "roc_auc": 0.9847374802761741,
+    "bedroc_alpha_80_5": 0.9061397931072515,
+    "enrichment_factors": {
+      "0.005": 56.16393442622951,
+      "0.01": 55.89129396784975,
+      "0.02": 40.759748527773354,
+      "0.05": 18.02927856094916
+    },
+    "top_1_percent_actives": 205,
+    "seconds": 35.439100900000994,
+    "preprocessing_and_encoder_seconds": {
+      "molecule": 35.03072780000002,
+      "pocket": 0.3834754999988945
+    },
+    "onnx_sample_max_embedding_error": 4.0978193283081055e-07,
+    "onnx_sample_embeddings": 53,
+    "cpu_fallback_molecules": 0,
+    "max_padded_tokens": {
+      "molecule": 56,
+      "pocket": 280
+    },
+    "preprocessing": "portable conformer=0, seed=1, max_pocket_atoms=511; identical across backends"
+  },
+  {
+    "suite": "DUD-E",
+    "target": "fa10",
+    "status": "PASS",
+    "backend": "tensorrt",
+    "molecules": 28847,
+    "actives": 537,
+    "pockets": 1,
+    "roc_auc": 0.9552718735837006,
+    "bedroc_alpha_80_5": 0.8672085841040104,
+    "enrichment_factors": {
+      "0.005": 52.97785911513517,
+      "0.01": 50.930634758010996,
+      "0.02": 37.98487650436181,
+      "0.05": 17.60845202744644
+    },
+    "top_1_percent_actives": 274,
+    "seconds": 53.94916369999919,
+    "preprocessing_and_encoder_seconds": {
+      "molecule": 53.4630844000003,
+      "pocket": 0.45795859999998356
+    },
+    "onnx_sample_max_embedding_error": 6.407499313354492e-07,
+    "onnx_sample_embeddings": 72,
+    "cpu_fallback_molecules": 0,
+    "max_padded_tokens": {
+      "molecule": 56,
+      "pocket": 304
+    },
+    "preprocessing": "portable conformer=0, seed=1, max_pocket_atoms=511; identical across backends"
+  },
+  {
+    "suite": "DUD-E",
+    "target": "fa7",
+    "status": "PASS",
+    "backend": "tensorrt",
+    "molecules": 6362,
+    "actives": 114,
+    "pockets": 1,
+    "roc_auc": 0.9053072421771458,
+    "bedroc_alpha_80_5": 0.6425560772354034,
+    "enrichment_factors": {
+      "0.005": 48.83114035087719,
+      "0.01": 39.239309210526315,
+      "0.02": 25.287554824561404,
+      "0.05": 13.2957157784744
+    },
+    "top_1_percent_actives": 45,
+    "seconds": 11.767807200001698,
+    "preprocessing_and_encoder_seconds": {
+      "molecule": 11.401938199998767,
+      "pocket": 0.3556847999989259
+    },
+    "onnx_sample_max_embedding_error": 5.103647708892822e-07,
+    "onnx_sample_embeddings": 19,
+    "cpu_fallback_molecules": 0,
+    "max_padded_tokens": {
+      "molecule": 56,
+      "pocket": 264
+    },
+    "preprocessing": "portable conformer=0, seed=1, max_pocket_atoms=511; identical across backends"
+  },
+  {
+    "suite": "DUD-E",
+    "target": "fabp4",
+    "status": "PASS",
+    "backend": "tensorrt",
+    "molecules": 2796,
+    "actives": 47,
+    "pockets": 1,
+    "roc_auc": 0.9129509376717259,
+    "bedroc_alpha_80_5": 0.6926290682644123,
+    "enrichment_factors": {
+      "0.005": 55.24012158054711,
+      "0.01": 46.741641337386014,
+      "0.02": 27.620060790273556,
+      "0.05": 12.74772036474164
+    },
+    "top_1_percent_actives": 22,
+    "seconds": 5.4721370999996,
+    "preprocessing_and_encoder_seconds": {
+      "molecule": 4.852658000001611,
+      "pocket": 0.6164257999989786
+    },
+    "onnx_sample_max_embedding_error": 3.129243850708008e-07,
+    "onnx_sample_embeddings": 13,
+    "cpu_fallback_molecules": 0,
+    "max_padded_tokens": {
+      "molecule": 48,
+      "pocket": 368
+    },
+    "preprocessing": "portable conformer=0, seed=1, max_pocket_atoms=511; identical across backends"
+  },
+  {
+    "suite": "DUD-E",
+    "target": "fak1",
+    "status": "PASS",
+    "backend": "tensorrt",
+    "molecules": 5449,
+    "actives": 100,
+    "pockets": 1,
+    "roc_auc": 0.8008543653019256,
+    "bedroc_alpha_80_5": 0.34793412266116225,
+    "enrichment_factors": {
+      "0.005": 23.352857142857143,
+      "0.01": 17.83309090909091,
+      "0.02": 14.997247706422018,
+      "0.05": 9.381062271062271
+    },
+    "top_1_percent_actives": 18,
+    "seconds": 9.89889729999959,
+    "preprocessing_and_encoder_seconds": {
+      "molecule": 9.440379899999243,
+      "pocket": 0.4529727000008279
+    },
+    "onnx_sample_max_embedding_error": 4.6193599700927734e-07,
+    "onnx_sample_embeddings": 18,
+    "cpu_fallback_molecules": 0,
+    "max_padded_tokens": {
+      "molecule": 48,
+      "pocket": 312
+    },
+    "preprocessing": "portable conformer=0, seed=1, max_pocket_atoms=511; identical across backends"
+  },
+  {
+    "suite": "DUD-E",
+    "target": "fgfr1",
+    "status": "PASS",
+    "backend": "tensorrt",
+    "molecules": 8835,
+    "actives": 139,
+    "pockets": 1,
+    "roc_auc": 0.6699441734560834,
+    "bedroc_alpha_80_5": 0.49313606940474874,
+    "enrichment_factors": {
+      "0.005": 48.02398081534772,
+      "0.01": 30.709320184301994,
+      "0.02": 18.67333252042434,
+      "0.05": 10.641459682932387
+    },
+    "top_1_percent_actives": 43,
+    "seconds": 15.78910999999971,
+    "preprocessing_and_encoder_seconds": {
+      "molecule": 15.477829499999643,
+      "pocket": 0.2987780000003113
+    },
+    "onnx_sample_max_embedding_error": 5.238689482212067e-07,
+    "onnx_sample_embeddings": 28,
+    "cpu_fallback_molecules": 0,
+    "max_padded_tokens": {
+      "molecule": 48,
+      "pocket": 240
+    },
+    "preprocessing": "portable conformer=0, seed=1, max_pocket_atoms=511; identical across backends"
+  },
+  {
+    "suite": "DUD-E",
+    "target": "fkb1a",
+    "status": "PASS",
+    "backend": "tensorrt",
+    "molecules": 5911,
+    "actives": 111,
+    "pockets": 1,
+    "roc_auc": 0.9774852438645542,
+    "bedroc_alpha_80_5": 0.8711300513990561,
+    "enrichment_factors": {
+      "0.005": 53.252252252252255,
+      "0.01": 50.589639639639636,
+      "0.02": 38.037323037323034,
+      "0.05": 17.27100073046019
+    },
+    "top_1_percent_actives": 57,
+    "seconds": 10.72147330000007,
+    "preprocessing_and_encoder_seconds": {
+      "molecule": 10.460655200000474,
+      "pocket": 0.2521378999990702
+    },
+    "onnx_sample_max_embedding_error": 5.550682544708252e-07,
+    "onnx_sample_embeddings": 24,
+    "cpu_fallback_molecules": 0,
+    "max_padded_tokens": {
+      "molecule": 48,
+      "pocket": 216
+    },
+    "preprocessing": "portable conformer=0, seed=1, max_pocket_atoms=511; identical across backends"
+  },
+  {
+    "suite": "DUD-E",
+    "target": "fnta",
+    "status": "PASS",
+    "backend": "tensorrt",
+    "molecules": 52056,
+    "actives": 592,
+    "pockets": 1,
+    "roc_auc": 0.9293143219243261,
+    "bedroc_alpha_80_5": 0.6881911472815182,
+    "enrichment_factors": {
+      "0.005": 77.15144454799626,
+      "0.01": 53.164522487938996,
+      "0.02": 31.645549099963688,
+      "0.05": 14.931285107620106
+    },
+    "top_1_percent_actives": 315,
+    "seconds": 92.65979200000038,
+    "preprocessing_and_encoder_seconds": {
+      "molecule": 92.06444270000065,
+      "pocket": 0.5513218999985838
+    },
+    "onnx_sample_max_embedding_error": 6.295740604400635e-07,
+    "onnx_sample_embeddings": 113,
+    "cpu_fallback_molecules": 0,
+    "max_padded_tokens": {
+      "molecule": 56,
+      "pocket": 344
+    },
+    "preprocessing": "portable conformer=0, seed=1, max_pocket_atoms=511; identical across backends"
+  },
+  {
+    "suite": "DUD-E",
+    "target": "fpps",
+    "status": "PASS",
+    "backend": "tensorrt",
+    "molecules": 8928,
+    "actives": 85,
+    "pockets": 1,
+    "roc_auc": 0.9991285895789956,
+    "bedroc_alpha_80_5": 0.9719813995736247,
+    "enrichment_factors": {
+      "0.005": 105.03529411764706,
+      "0.01": 92.19764705882353,
+      "0.02": 48.116726914229375,
+      "0.05": 19.973154362416107
+    },
+    "top_1_percent_actives": 79,
+    "seconds": 14.193385500000659,
+    "preprocessing_and_encoder_seconds": {
+      "molecule": 13.913136499999382,
+      "pocket": 0.26541680000082124
+    },
+    "onnx_sample_max_embedding_error": 3.129243850708008e-07,
+    "onnx_sample_embeddings": 33,
+    "cpu_fallback_molecules": 0,
+    "max_padded_tokens": {
+      "molecule": 48,
+      "pocket": 224
+    },
+    "preprocessing": "portable conformer=0, seed=1, max_pocket_atoms=511; identical across backends"
+  },
+  {
+    "suite": "DUD-E",
+    "target": "gcr",
+    "status": "PASS",
+    "backend": "tensorrt",
+    "molecules": 15254,
+    "actives": 257,
+    "pockets": 1,
+    "roc_auc": 0.8714928459102975,
+    "bedroc_alpha_80_5": 0.4436408358972762,
+    "enrichment_factors": {
+      "0.005": 37.77078174743545,
+      "0.01": 26.379593601383483,
+      "0.02": 17.651051600925715,
+      "0.05": 9.257059222503838
+    },
+    "top_1_percent_actives": 68,
+    "seconds": 26.92120360000081,
+    "preprocessing_and_encoder_seconds": {
+      "molecule": 26.16025029999946,
+      "pocket": 0.7393400000000838
+    },
+    "onnx_sample_max_embedding_error": 4.3958425521850586e-07,
+    "onnx_sample_embeddings": 39,
+    "cpu_fallback_molecules": 0,
+    "max_padded_tokens": {
+      "molecule": 48,
+      "pocket": 408
+    },
+    "preprocessing": "portable conformer=0, seed=1, max_pocket_atoms=511; identical across backends"
+  },
+  {
+    "suite": "DUD-E",
+    "target": "glcm",
+    "status": "PASS",
+    "backend": "tensorrt",
+    "molecules": 3853,
+    "actives": 54,
+    "pockets": 1,
+    "roc_auc": 0.8530802452887212,
+    "bedroc_alpha_80_5": 0.6529534683237718,
+    "enrichment_factors": {
+      "0.005": 53.513888888888886,
+      "0.01": 42.079297245963915,
+      "0.02": 31.102089268755936,
+      "0.05": 13.309153713298791
+    },
+    "top_1_percent_actives": 23,
+    "seconds": 6.645295399999668,
+    "preprocessing_and_encoder_seconds": {
+      "molecule": 6.325453399998878,
+      "pocket": 0.3122929999990447
+    },
+    "onnx_sample_max_embedding_error": 7.003545761108398e-07,
+    "onnx_sample_embeddings": 14,
+    "cpu_fallback_molecules": 0,
+    "max_padded_tokens": {
+      "molecule": 48,
+      "pocket": 248
+    },
+    "preprocessing": "portable conformer=0, seed=1, max_pocket_atoms=511; identical across backends"
+  },
+  {
+    "suite": "DUD-E",
+    "target": "gria2",
+    "status": "PASS",
+    "backend": "tensorrt",
+    "molecules": 12001,
+    "actives": 158,
+    "pockets": 1,
+    "roc_auc": 0.7457409547059257,
+    "bedroc_alpha_80_5": 0.1960557154375235,
+    "enrichment_factors": {
+      "0.005": 21.167980908902262,
+      "0.01": 11.92692750287687,
+      "0.02": 7.564052733862072,
+      "0.05": 5.308051980875756
+    },
+    "top_1_percent_actives": 19,
+    "seconds": 19.912377599999672,
+    "preprocessing_and_encoder_seconds": {
+      "molecule": 19.63776340000004,
+      "pocket": 0.25793349999912607
+    },
+    "onnx_sample_max_embedding_error": 3.7997961044311523e-07,
+    "onnx_sample_embeddings": 26,
+    "cpu_fallback_molecules": 0,
+    "max_padded_tokens": {
+      "molecule": 56,
+      "pocket": 216
+    },
+    "preprocessing": "portable conformer=0, seed=1, max_pocket_atoms=511; identical across backends"
+  },
+  {
+    "suite": "DUD-E",
+    "target": "grik1",
+    "status": "PASS",
+    "backend": "tensorrt",
+    "molecules": 6647,
+    "actives": 101,
+    "pockets": 1,
+    "roc_auc": 0.9101348264982319,
+    "bedroc_alpha_80_5": 0.6273749058553895,
+    "enrichment_factors": {
+      "0.005": 50.32673267326733,
+      "0.01": 38.30840845278558,
+      "0.02": 28.699918112111963,
+      "0.05": 13.241429548360243
+    },
+    "top_1_percent_actives": 39,
+    "seconds": 10.83069179999984,
+    "preprocessing_and_encoder_seconds": {
+      "molecule": 10.572482400000808,
+      "pocket": 0.25215620000017225
+    },
+    "onnx_sample_max_embedding_error": 5.401670932769775e-07,
+    "onnx_sample_embeddings": 24,
+    "cpu_fallback_molecules": 0,
+    "max_padded_tokens": {
+      "molecule": 48,
+      "pocket": 216
+    },
+    "preprocessing": "portable conformer=0, seed=1, max_pocket_atoms=511; identical across backends"
+  },
+  {
+    "suite": "DUD-E",
+    "target": "hdac2",
+    "status": "PASS",
+    "backend": "tensorrt",
+    "molecules": 10485,
+    "actives": 185,
+    "pockets": 1,
+    "roc_auc": 0.9221910259774337,
+    "bedroc_alpha_80_5": 0.5656237101028171,
+    "enrichment_factors": {
+      "0.005": 29.941866394696582,
+      "0.01": 31.846332046332044,
+      "0.02": 24.55945945945946,
+      "0.05": 14.357837837837836
+    },
+    "top_1_percent_actives": 59,
+    "seconds": 18.18477249999887,
+    "preprocessing_and_encoder_seconds": {
+      "molecule": 17.71207350000077,
+      "pocket": 0.4593187999998918
+    },
+    "onnx_sample_max_embedding_error": 5.364418029785156e-07,
+    "onnx_sample_embeddings": 30,
+    "cpu_fallback_molecules": 0,
+    "max_padded_tokens": {
+      "molecule": 48,
+      "pocket": 312
+    },
+    "preprocessing": "portable conformer=0, seed=1, max_pocket_atoms=511; identical across backends"
+  },
+  {
+    "suite": "DUD-E",
+    "target": "hdac8",
+    "status": "PASS",
+    "backend": "tensorrt",
+    "molecules": 10618,
+    "actives": 170,
+    "pockets": 1,
+    "roc_auc": 0.9751306188631654,
+    "bedroc_alpha_80_5": 0.9408603692864157,
+    "enrichment_factors": {
+      "0.005": 62.45882352941177,
+      "0.01": 61.875096206706985,
+      "0.02": 44.571554819110744,
+      "0.05": 18.467109781765814
+    },
+    "top_1_percent_actives": 106,
+    "seconds": 17.8187381000007,
+    "preprocessing_and_encoder_seconds": {
+      "molecule": 17.523480000001655,
+      "pocket": 0.2845287999989523
+    },
+    "onnx_sample_max_embedding_error": 4.3213367462158203e-07,
+    "onnx_sample_embeddings": 27,
+    "cpu_fallback_molecules": 0,
+    "max_padded_tokens": {
+      "molecule": 48,
+      "pocket": 232
+    },
+    "preprocessing": "portable conformer=0, seed=1, max_pocket_atoms=511; identical across backends"
+  },
+  {
+    "suite": "DUD-E",
+    "target": "hivint",
+    "status": "PASS",
+    "backend": "tensorrt",
+    "molecules": 6750,
+    "actives": 100,
+    "pockets": 1,
+    "roc_auc": 0.4573624060150376,
+    "bedroc_alpha_80_5": 0.0015307397133978054,
+    "enrichment_factors": {
+      "0.005": 0.0,
+      "0.01": 0.0,
+      "0.02": 0.0,
+      "0.05": 0.599112426035503
+    },
+    "top_1_percent_actives": 0,
+    "seconds": 11.427654799997981,
+    "preprocessing_and_encoder_seconds": {
+      "molecule": 11.161396999999852,
+      "pocket": 0.25852149999991525
+    },
+    "onnx_sample_max_embedding_error": 4.172325134277344e-07,
+    "onnx_sample_embeddings": 23,
+    "cpu_fallback_molecules": 0,
+    "max_padded_tokens": {
+      "molecule": 48,
+      "pocket": 216
+    },
+    "preprocessing": "portable conformer=0, seed=1, max_pocket_atoms=511; identical across backends"
+  },
+  {
+    "suite": "DUD-E",
+    "target": "hivpr",
+    "status": "PASS",
+    "backend": "tensorrt",
+    "molecules": 36283,
+    "actives": 536,
+    "pockets": 1,
+    "roc_auc": 0.8271150715496843,
+    "bedroc_alpha_80_5": 0.40823704821157103,
+    "enrichment_factors": {
+      "0.005": 36.07769189765459,
+      "0.01": 26.293650548908353,
+      "0.02": 17.71558015706591,
+      "0.05": 9.249397639899675
+    },
+    "top_1_percent_actives": 141,
+    "seconds": 67.97785189999922,
+    "preprocessing_and_encoder_seconds": {
+      "molecule": 67.43113079999966,
+      "pocket": 0.5142563999979757
+    },
+    "onnx_sample_max_embedding_error": 5.871988832950592e-07,
+    "onnx_sample_embeddings": 76,
+    "cpu_fallback_molecules": 0,
+    "max_padded_tokens": {
+      "molecule": 56,
+      "pocket": 336
+    },
+    "preprocessing": "portable conformer=0, seed=1, max_pocket_atoms=511; identical across backends"
+  },
+  {
+    "suite": "DUD-E",
+    "target": "hivrt",
+    "status": "PASS",
+    "backend": "tensorrt",
+    "molecules": 19216,
+    "actives": 338,
+    "pockets": 1,
+    "roc_auc": 0.8259441972779435,
+    "bedroc_alpha_80_5": 0.45613477666001556,
+    "enrichment_factors": {
+      "0.005": 35.16622948819618,
+      "0.01": 25.333047183983812,
+      "0.02": 18.606132329209252,
+      "0.05": 10.3528745328153
+    },
+    "top_1_percent_actives": 86,
+    "seconds": 31.03221239999766,
+    "preprocessing_and_encoder_seconds": {
+      "molecule": 30.510295799998858,
+      "pocket": 0.49823839999953634
+    },
+    "onnx_sample_max_embedding_error": 3.8743019104003906e-07,
+    "onnx_sample_embeddings": 49,
+    "cpu_fallback_molecules": 0,
+    "max_padded_tokens": {
+      "molecule": 48,
+      "pocket": 328
+    },
+    "preprocessing": "portable conformer=0, seed=1, max_pocket_atoms=511; identical across backends"
+  },
+  {
+    "suite": "DUD-E",
+    "target": "hmdh",
+    "status": "PASS",
+    "backend": "tensorrt",
+    "molecules": 8919,
+    "actives": 170,
+    "pockets": 1,
+    "roc_auc": 0.9274034679593635,
+    "bedroc_alpha_80_5": 0.8510500530156713,
+    "enrichment_factors": {
+      "0.005": 52.46470588235294,
+      "0.01": 52.46470588235294,
+      "0.02": 36.05116661189616,
+      "0.05": 15.998206278026906
+    },
+    "top_1_percent_actives": 90,
+    "seconds": 16.134124799998972,
+    "preprocessing_and_encoder_seconds": {
+      "molecule": 15.67832570000246,
+      "pocket": 0.4435680999995384
+    },
+    "onnx_sample_max_embedding_error": 4.544854164123535e-07,
+    "onnx_sample_embeddings": 32,
+    "cpu_fallback_molecules": 0,
+    "max_padded_tokens": {
+      "molecule": 48,
+      "pocket": 304
+    },
+    "preprocessing": "portable conformer=0, seed=1, max_pocket_atoms=511; identical across backends"
+  },
+  {
+    "suite": "DUD-E",
+    "target": "hs90a",
+    "status": "PASS",
+    "backend": "tensorrt",
+    "molecules": 4937,
+    "actives": 88,
+    "pockets": 1,
+    "roc_auc": 0.8727924220551566,
+    "bedroc_alpha_80_5": 0.7112887264947564,
+    "enrichment_factors": {
+      "0.005": 53.858181818181826,
+      "0.01": 43.759772727272725,
+      "0.02": 30.60123966942149,
+      "0.05": 12.946678321678322
+    },
+    "top_1_percent_actives": 39,
+    "seconds": 8.845935900000768,
+    "preprocessing_and_encoder_seconds": {
+      "molecule": 8.539835600000515,
+      "pocket": 0.29999379999935627
+    },
+    "onnx_sample_max_embedding_error": 7.264316082000732e-07,
+    "onnx_sample_embeddings": 18,
+    "cpu_fallback_molecules": 0,
+    "max_padded_tokens": {
+      "molecule": 48,
+      "pocket": 240
+    },
+    "preprocessing": "portable conformer=0, seed=1, max_pocket_atoms=511; identical across backends"
+  },
+  {
+    "suite": "DUD-E",
+    "target": "hxk4",
+    "status": "PASS",
+    "backend": "tensorrt",
+    "molecules": 4792,
+    "actives": 92,
+    "pockets": 1,
+    "roc_auc": 0.5793987049028677,
+    "bedroc_alpha_80_5": 0.017197361926937164,
+    "enrichment_factors": {
+      "0.005": 0.0,
+      "0.01": 0.0,
+      "0.02": 1.085144927536232,
+      "0.05": 1.3021739130434782
+    },
+    "top_1_percent_actives": 0,
+    "seconds": 8.572801199999958,
+    "preprocessing_and_encoder_seconds": {
+      "molecule": 8.256996899999649,
+      "pocket": 0.3073274999987916
+    },
+    "onnx_sample_max_embedding_error": 5.21540641784668e-07,
+    "onnx_sample_embeddings": 25,
+    "cpu_fallback_molecules": 0,
+    "max_padded_tokens": {
+      "molecule": 40,
+      "pocket": 248
+    },
+    "preprocessing": "portable conformer=0, seed=1, max_pocket_atoms=511; identical across backends"
+  },
+  {
+    "suite": "DUD-E",
+    "target": "igf1r",
+    "status": "PASS",
+    "backend": "tensorrt",
+    "molecules": 9448,
+    "actives": 148,
+    "pockets": 1,
+    "roc_auc": 0.9268693693693694,
+    "bedroc_alpha_80_5": 0.7505317449265234,
+    "enrichment_factors": {
+      "0.005": 61.17792792792793,
+      "0.01": 49.054338549075396,
+      "0.02": 32.42556842556843,
+      "0.05": 16.330609679446887
+    },
+    "top_1_percent_actives": 73,
+    "seconds": 17.58700250000038,
+    "preprocessing_and_encoder_seconds": {
+      "molecule": 17.267735900000844,
+      "pocket": 0.3056311000000278
+    },
+    "onnx_sample_max_embedding_error": 7.227063179016113e-07,
+    "onnx_sample_embeddings": 33,
+    "cpu_fallback_molecules": 0,
+    "max_padded_tokens": {
+      "molecule": 56,
+      "pocket": 248
+    },
+    "preprocessing": "portable conformer=0, seed=1, max_pocket_atoms=511; identical across backends"
+  },
+  {
+    "suite": "DUD-E",
+    "target": "inha",
+    "status": "PASS",
+    "backend": "tensorrt",
+    "molecules": 2343,
+    "actives": 43,
+    "pockets": 1,
+    "roc_auc": 0.7016582406471183,
+    "bedroc_alpha_80_5": 0.17121516760803854,
+    "enrichment_factors": {
+      "0.005": 4.540697674418604,
+      "0.01": 11.351744186046512,
+      "0.02": 8.115289460663037,
+      "0.05": 6.002956247536461
+    },
+    "top_1_percent_actives": 5,
+    "seconds": 4.055684200000542,
+    "preprocessing_and_encoder_seconds": {
+      "molecule": 3.7397091000020737,
+      "pocket": 0.3118730999995023
+    },
+    "onnx_sample_max_embedding_error": 3.725290298461914e-07,
+    "onnx_sample_embeddings": 16,
+    "cpu_fallback_molecules": 0,
+    "max_padded_tokens": {
+      "molecule": 40,
+      "pocket": 248
+    },
+    "preprocessing": "portable conformer=0, seed=1, max_pocket_atoms=511; identical across backends"
+  },
+  {
+    "suite": "DUD-E",
+    "target": "ital",
+    "status": "PASS",
+    "backend": "tensorrt",
+    "molecules": 8637,
+    "actives": 138,
+    "pockets": 1,
+    "roc_auc": 0.6528415107659725,
+    "bedroc_alpha_80_5": 0.3357784733391367,
+    "enrichment_factors": {
+      "0.005": 31.293478260869566,
+      "0.01": 19.423538230884557,
+      "0.02": 13.023875345564212,
+      "0.05": 6.374597423510467
+    },
+    "top_1_percent_actives": 27,
+    "seconds": 16.448184500000934,
+    "preprocessing_and_encoder_seconds": {
+      "molecule": 16.077001699999528,
+      "pocket": 0.3626127000025008
+    },
+    "onnx_sample_max_embedding_error": 3.762543201446533e-07,
+    "onnx_sample_embeddings": 30,
+    "cpu_fallback_molecules": 0,
+    "max_padded_tokens": {
+      "molecule": 56,
+      "pocket": 272
+    },
+    "preprocessing": "portable conformer=0, seed=1, max_pocket_atoms=511; identical across backends"
+  },
+  {
+    "suite": "DUD-E",
+    "target": "jak2",
+    "status": "PASS",
+    "backend": "tensorrt",
+    "molecules": 6607,
+    "actives": 107,
+    "pockets": 1,
+    "roc_auc": 0.7120452911574406,
+    "bedroc_alpha_80_5": 0.4455886069411994,
+    "enrichment_factors": {
+      "0.005": 45.40269378779549,
+      "0.01": 29.491421397684476,
+      "0.02": 16.713653292108777,
+      "0.05": 7.835050964226219
+    },
+    "top_1_percent_actives": 32,
+    "seconds": 11.590318999998999,
+    "preprocessing_and_encoder_seconds": {
+      "molecule": 11.179343299998436,
+      "pocket": 0.40183650000108173
+    },
+    "onnx_sample_max_embedding_error": 3.650784492492676e-07,
+    "onnx_sample_embeddings": 24,
+    "cpu_fallback_molecules": 0,
+    "max_padded_tokens": {
+      "molecule": 48,
+      "pocket": 288
+    },
+    "preprocessing": "portable conformer=0, seed=1, max_pocket_atoms=511; identical across backends"
+  },
+  {
+    "suite": "DUD-E",
+    "target": "kif11",
+    "status": "PASS",
+    "backend": "tensorrt",
+    "molecules": 6966,
+    "actives": 116,
+    "pockets": 1,
+    "roc_auc": 0.8609866599546941,
+    "bedroc_alpha_80_5": 0.7492897874485511,
+    "enrichment_factors": {
+      "0.005": 56.62019704433497,
+      "0.01": 47.183497536945815,
+      "0.02": 32.17056650246305,
+      "0.05": 14.281642130224286
+    },
+    "top_1_percent_actives": 55,
+    "seconds": 11.815887299999304,
+    "preprocessing_and_encoder_seconds": {
+      "molecule": 11.429027599999245,
+      "pocket": 0.3810150000026624
+    },
+    "onnx_sample_max_embedding_error": 3.8743019104003906e-07,
+    "onnx_sample_embeddings": 23,
+    "cpu_fallback_molecules": 0,
+    "max_padded_tokens": {
+      "molecule": 48,
+      "pocket": 280
+    },
+    "preprocessing": "portable conformer=0, seed=1, max_pocket_atoms=511; identical across backends"
+  },
+  {
+    "suite": "DUD-E",
+    "target": "kit",
+    "status": "PASS",
+    "backend": "tensorrt",
+    "molecules": 10609,
+    "actives": 166,
+    "pockets": 1,
+    "roc_auc": 0.3792561801356532,
+    "bedroc_alpha_80_5": 0.09477683094807386,
+    "enrichment_factors": {
+      "0.005": 9.46809460062472,
+      "0.01": 5.97286341628195,
+      "0.02": 3.30049776571073,
+      "0.05": 2.0460712908129692
+    },
+    "top_1_percent_actives": 10,
+    "seconds": 18.74762929999997,
+    "preprocessing_and_encoder_seconds": {
+      "molecule": 18.473702300001605,
+      "pocket": 0.25863029999891296
+    },
+    "onnx_sample_max_embedding_error": 4.842877388000488e-07,
+    "onnx_sample_embeddings": 26,
+    "cpu_fallback_molecules": 0,
+    "max_padded_tokens": {
+      "molecule": 48,
+      "pocket": 224
+    },
+    "preprocessing": "portable conformer=0, seed=1, max_pocket_atoms=511; identical across backends"
+  },
+  {
+    "suite": "DUD-E",
+    "target": "kith",
+    "status": "PASS",
+    "backend": "tensorrt",
+    "molecules": 2907,
+    "actives": 57,
+    "pockets": 1,
+    "roc_auc": 0.7492336103416436,
+    "bedroc_alpha_80_5": 0.1552006552864486,
+    "enrichment_factors": {
+      "0.005": 10.2,
+      "0.01": 8.5,
+      "0.02": 5.186440677966102,
+      "0.05": 3.1438356164383565
+    },
+    "top_1_percent_actives": 5,
+    "seconds": 5.014100299998972,
+    "preprocessing_and_encoder_seconds": {
+      "molecule": 4.764384499998414,
+      "pocket": 0.2464973000023747
+    },
+    "onnx_sample_max_embedding_error": 3.427267074584961e-07,
+    "onnx_sample_embeddings": 12,
+    "cpu_fallback_molecules": 0,
+    "max_padded_tokens": {
+      "molecule": 48,
+      "pocket": 216
+    },
+    "preprocessing": "portable conformer=0, seed=1, max_pocket_atoms=511; identical across backends"
+  },
+  {
+    "suite": "DUD-E",
+    "target": "kpcb",
+    "status": "PASS",
+    "backend": "tensorrt",
+    "molecules": 8833,
+    "actives": 135,
+    "pockets": 1,
+    "roc_auc": 0.8505871933096583,
+    "bedroc_alpha_80_5": 0.7604427190101453,
+    "enrichment_factors": {
+      "0.005": 65.42962962962963,
+      "0.01": 59.54831460674158,
+      "0.02": 31.421008579200674,
+      "0.05": 13.766867772750127
+    },
+    "top_1_percent_actives": 81,
+    "seconds": 15.779003600000578,
+    "preprocessing_and_encoder_seconds": {
+      "molecule": 15.38364349999756,
+      "pocket": 0.38662250000197673
+    },
+    "onnx_sample_max_embedding_error": 5.811452865600586e-07,
+    "onnx_sample_embeddings": 26,
+    "cpu_fallback_molecules": 0,
+    "max_padded_tokens": {
+      "molecule": 48,
+      "pocket": 280
+    },
+    "preprocessing": "portable conformer=0, seed=1, max_pocket_atoms=511; identical across backends"
+  },
+  {
+    "suite": "DUD-E",
+    "target": "lck",
+    "status": "PASS",
+    "backend": "tensorrt",
+    "molecules": 27813,
+    "actives": 420,
+    "pockets": 1,
+    "roc_auc": 0.5831445902933144,
+    "bedroc_alpha_80_5": 0.08755006704163015,
+    "enrichment_factors": {
+      "0.005": 5.20311224489796,
+      "0.01": 5.221761392729134,
+      "0.02": 3.923352141574763,
+      "0.05": 2.665995686556434
+    },
+    "top_1_percent_actives": 22,
+    "seconds": 49.03655060000165,
+    "preprocessing_and_encoder_seconds": {
+      "molecule": 48.73321990000113,
+      "pocket": 0.2722694000003685
+    },
+    "onnx_sample_max_embedding_error": 4.172325134277344e-07,
+    "onnx_sample_embeddings": 62,
+    "cpu_fallback_molecules": 0,
+    "max_padded_tokens": {
+      "molecule": 48,
+      "pocket": 224
+    },
+    "preprocessing": "portable conformer=0, seed=1, max_pocket_atoms=511; identical across backends"
+  },
+  {
+    "suite": "DUD-E",
+    "target": "lkha4",
+    "status": "PASS",
+    "backend": "tensorrt",
+    "molecules": 9617,
+    "actives": 171,
+    "pockets": 1,
+    "roc_auc": 0.9374313580549581,
+    "bedroc_alpha_80_5": 0.5714419041714366,
+    "enrichment_factors": {
+      "0.005": 37.87576083064805,
+      "0.01": 29.569361548200398,
+      "0.02": 25.06020664788049,
+      "0.05": 13.563020510388931
+    },
+    "top_1_percent_actives": 51,
+    "seconds": 16.027623300000414,
+    "preprocessing_and_encoder_seconds": {
+      "molecule": 15.438885999999911,
+      "pocket": 0.5747040999995079
+    },
+    "onnx_sample_max_embedding_error": 5.736947059631348e-07,
+    "onnx_sample_embeddings": 26,
+    "cpu_fallback_molecules": 0,
+    "max_padded_tokens": {
+      "molecule": 48,
+      "pocket": 360
+    },
+    "preprocessing": "portable conformer=0, seed=1, max_pocket_atoms=511; identical across backends"
+  },
+  {
+    "suite": "DUD-E",
+    "target": "mapk2",
+    "status": "PASS",
+    "backend": "tensorrt",
+    "molecules": 6246,
+    "actives": 101,
+    "pockets": 1,
+    "roc_auc": 0.8516269364934866,
+    "bedroc_alpha_80_5": 0.6292676908193698,
+    "enrichment_factors": {
+      "0.005": 44.448638613861384,
+      "0.01": 41.227722772277225,
+      "0.02": 27.705029702970297,
+      "0.05": 13.83038623351153
+    },
+    "top_1_percent_actives": 42,
+    "seconds": 10.711784900002385,
+    "preprocessing_and_encoder_seconds": {
+      "molecule": 10.338617899997189,
+      "pocket": 0.36455479999858653
+    },
+    "onnx_sample_max_embedding_error": 3.725290298461914e-07,
+    "onnx_sample_embeddings": 23,
+    "cpu_fallback_molecules": 0,
+    "max_padded_tokens": {
+      "molecule": 48,
+      "pocket": 272
+    },
+    "preprocessing": "portable conformer=0, seed=1, max_pocket_atoms=511; identical across backends"
+  },
+  {
+    "suite": "DUD-E",
+    "target": "mcr",
+    "status": "PASS",
+    "backend": "tensorrt",
+    "molecules": 5242,
+    "actives": 93,
+    "pockets": 1,
+    "roc_auc": 0.8832887479978365,
+    "bedroc_alpha_80_5": 0.46855819809123694,
+    "enrichment_factors": {
+      "0.005": 39.66467542811629,
+      "0.01": 27.651044836680867,
+      "0.02": 18.251715309779826,
+      "0.05": 9.85862054867329
+    },
+    "top_1_percent_actives": 26,
+    "seconds": 9.24975859999904,
+    "preprocessing_and_encoder_seconds": {
+      "molecule": 8.695613300002151,
+      "pocket": 0.5468298999985564
+    },
+    "onnx_sample_max_embedding_error": 4.3958425521850586e-07,
+    "onnx_sample_embeddings": 19,
+    "cpu_fallback_molecules": 0,
+    "max_padded_tokens": {
+      "molecule": 48,
+      "pocket": 344
+    },
+    "preprocessing": "portable conformer=0, seed=1, max_pocket_atoms=511; identical across backends"
+  },
+  {
+    "suite": "DUD-E",
+    "target": "met",
+    "status": "PASS",
+    "backend": "tensorrt",
+    "molecules": 11411,
+    "actives": 166,
+    "pockets": 1,
+    "roc_auc": 0.7642813137833683,
+    "bedroc_alpha_80_5": 0.7552876690018838,
+    "enrichment_factors": {
+      "0.005": 67.55577482343166,
+      "0.01": 57.38376113148246,
+      "0.02": 33.019676961119586,
+      "0.05": 13.362954444749224
+    },
+    "top_1_percent_actives": 96,
+    "seconds": 21.077439900000172,
+    "preprocessing_and_encoder_seconds": {
+      "molecule": 20.35183959999995,
+      "pocket": 0.7120255999980145
+    },
+    "onnx_sample_max_embedding_error": 4.6938657760620117e-07,
+    "onnx_sample_embeddings": 28,
+    "cpu_fallback_molecules": 0,
+    "max_padded_tokens": {
+      "molecule": 48,
+      "pocket": 408
+    },
+    "preprocessing": "portable conformer=0, seed=1, max_pocket_atoms=511; identical across backends"
+  },
+  {
+    "suite": "DUD-E",
+    "target": "mk01",
+    "status": "PASS",
+    "backend": "tensorrt",
+    "molecules": 4629,
+    "actives": 79,
+    "pockets": 1,
+    "roc_auc": 0.8354958965085547,
+    "bedroc_alpha_80_5": 0.619428505286155,
+    "enrichment_factors": {
+      "0.005": 34.18037974683544,
+      "0.01": 32.41422030702935,
+      "0.02": 30.87260106165782,
+      "0.05": 13.133347883020516
+    },
+    "top_1_percent_actives": 26,
+    "seconds": 8.082819799998106,
+    "preprocessing_and_encoder_seconds": {
+      "molecule": 7.799880200000189,
+      "pocket": 0.2748974999994971
+    },
+    "onnx_sample_max_embedding_error": 4.76837158203125e-07,
+    "onnx_sample_embeddings": 22,
+    "cpu_fallback_molecules": 0,
+    "max_padded_tokens": {
+      "molecule": 48,
+      "pocket": 232
+    },
+    "preprocessing": "portable conformer=0, seed=1, max_pocket_atoms=511; identical across backends"
+  },
+  {
+    "suite": "DUD-E",
+    "target": "mk10",
+    "status": "PASS",
+    "backend": "tensorrt",
+    "molecules": 6701,
+    "actives": 104,
+    "pockets": 1,
+    "roc_auc": 0.7439424680215949,
+    "bedroc_alpha_80_5": 0.41423367871856787,
+    "enrichment_factors": {
+      "0.005": 39.7966628959276,
+      "0.01": 25.583569004524886,
+      "0.02": 16.70477207977208,
+      "0.05": 8.245850503663004
+    },
+    "top_1_percent_actives": 27,
+    "seconds": 11.60853599999973,
+    "preprocessing_and_encoder_seconds": {
+      "molecule": 11.272380400001566,
+      "pocket": 0.3290651000024809
+    },
+    "onnx_sample_max_embedding_error": 7.301568984985352e-07,
+    "onnx_sample_embeddings": 22,
+    "cpu_fallback_molecules": 0,
+    "max_padded_tokens": {
+      "molecule": 48,
+      "pocket": 256
+    },
+    "preprocessing": "portable conformer=0, seed=1, max_pocket_atoms=511; identical across backends"
+  },
+  {
+    "suite": "DUD-E",
+    "target": "mk14",
+    "status": "PASS",
+    "backend": "tensorrt",
+    "molecules": 36415,
+    "actives": 578,
+    "pockets": 1,
+    "roc_auc": 0.7208766181131735,
+    "bedroc_alpha_80_5": 0.48351869179561435,
+    "enrichment_factors": {
+      "0.005": 47.50950138975551,
+      "0.01": 32.10499123098071,
+      "0.02": 19.01286779538734,
+      "0.05": 9.306680613906577
+    },
+    "top_1_percent_actives": 186,
+    "seconds": 62.42016149999836,
+    "preprocessing_and_encoder_seconds": {
+      "molecule": 61.9956368000021,
+      "pocket": 0.3954446999996435
+    },
+    "onnx_sample_max_embedding_error": 5.662441253662109e-07,
+    "onnx_sample_embeddings": 80,
+    "cpu_fallback_molecules": 0,
+    "max_padded_tokens": {
+      "molecule": 48,
+      "pocket": 288
+    },
+    "preprocessing": "portable conformer=0, seed=1, max_pocket_atoms=511; identical across backends"
+  },
+  {
+    "suite": "DUD-E",
+    "target": "mmp13",
+    "status": "PASS",
+    "backend": "tensorrt",
+    "molecules": 37766,
+    "actives": 572,
+    "pockets": 1,
+    "roc_auc": 0.9783265478942201,
+    "bedroc_alpha_80_5": 0.7132203702116089,
+    "enrichment_factors": {
+      "0.005": 57.64041514041514,
+      "0.01": 46.636335886335885,
+      "0.02": 31.09089059089059,
+      "0.05": 16.951757876850518
+    },
+    "top_1_percent_actives": 267,
+    "seconds": 66.2047700999974,
+    "preprocessing_and_encoder_seconds": {
+      "molecule": 65.92524430000049,
+      "pocket": 0.24445320000086213
+    },
+    "onnx_sample_max_embedding_error": 6.705522537231445e-07,
+    "onnx_sample_embeddings": 87,
+    "cpu_fallback_molecules": 0,
+    "max_padded_tokens": {
+      "molecule": 56,
+      "pocket": 216
+    },
+    "preprocessing": "portable conformer=0, seed=1, max_pocket_atoms=511; identical across backends"
+  },
+  {
+    "suite": "DUD-E",
+    "target": "mp2k1",
+    "status": "PASS",
+    "backend": "tensorrt",
+    "molecules": 8267,
+    "actives": 121,
+    "pockets": 1,
+    "roc_auc": 0.5410220094839429,
+    "bedroc_alpha_80_5": 0.03157535457740542,
+    "enrichment_factors": {
+      "0.005": 0.0,
+      "0.01": 0.8231604102359853,
+      "0.02": 2.469481230707956,
+      "0.05": 1.3202379526490198
+    },
+    "top_1_percent_actives": 1,
+    "seconds": 14.94896620000145,
+    "preprocessing_and_encoder_seconds": {
+      "molecule": 14.461409200001071,
+      "pocket": 0.4746499000029871
+    },
+    "onnx_sample_max_embedding_error": 3.8743019104003906e-07,
+    "onnx_sample_embeddings": 28,
+    "cpu_fallback_molecules": 0,
+    "max_padded_tokens": {
+      "molecule": 48,
+      "pocket": 320
+    },
+    "preprocessing": "portable conformer=0, seed=1, max_pocket_atoms=511; identical across backends"
+  },
+  {
+    "suite": "DUD-E",
+    "target": "nos1",
+    "status": "PASS",
+    "backend": "tensorrt",
+    "molecules": 8140,
+    "actives": 100,
+    "pockets": 1,
+    "roc_auc": 0.275455223880597,
+    "bedroc_alpha_80_5": 0.00011626389522911402,
+    "enrichment_factors": {
+      "0.005": 0.0,
+      "0.01": 0.0,
+      "0.02": 0.0,
+      "0.05": 0.0
+    },
+    "top_1_percent_actives": 0,
+    "seconds": 12.71116389999952,
+    "preprocessing_and_encoder_seconds": {
+      "molecule": 12.410610400002042,
+      "pocket": 0.2892208999983268
+    },
+    "onnx_sample_max_embedding_error": 3.7997961044311523e-07,
+    "onnx_sample_embeddings": 21,
+    "cpu_fallback_molecules": 0,
+    "max_padded_tokens": {
+      "molecule": 48,
+      "pocket": 240
+    },
+    "preprocessing": "portable conformer=0, seed=1, max_pocket_atoms=511; identical across backends"
+  },
+  {
+    "suite": "DUD-E",
+    "target": "nram",
+    "status": "PASS",
+    "backend": "tensorrt",
+    "molecules": 6297,
+    "actives": 98,
+    "pockets": 1,
+    "roc_auc": 0.9923967328502622,
+    "bedroc_alpha_80_5": 0.99485403095603,
+    "enrichment_factors": {
+      "0.005": 64.25510204081633,
+      "0.01": 64.25510204081633,
+      "0.02": 49.46622934888241,
+      "0.05": 19.786491739552964
+    },
+    "top_1_percent_actives": 63,
+    "seconds": 10.085705599998619,
+    "preprocessing_and_encoder_seconds": {
+      "molecule": 9.658938699998544,
+      "pocket": 0.4187786000002234
+    },
+    "onnx_sample_max_embedding_error": 3.91155481338501e-07,
+    "onnx_sample_embeddings": 18,
+    "cpu_fallback_molecules": 0,
+    "max_padded_tokens": {
+      "molecule": 48,
+      "pocket": 296
+    },
+    "preprocessing": "portable conformer=0, seed=1, max_pocket_atoms=511; identical across backends"
+  },
+  {
+    "suite": "DUD-E",
+    "target": "pa2ga",
+    "status": "PASS",
+    "backend": "tensorrt",
+    "molecules": 5249,
+    "actives": 99,
+    "pockets": 1,
+    "roc_auc": 0.8777601255271158,
+    "bedroc_alpha_80_5": 0.6499554983777553,
+    "enrichment_factors": {
+      "0.005": 43.20164609053498,
+      "0.01": 35.01334095673719,
+      "0.02": 27.772486772486772,
+      "0.05": 14.111840841878864
+    },
+    "top_1_percent_actives": 35,
+    "seconds": 9.76046420000057,
+    "preprocessing_and_encoder_seconds": {
+      "molecule": 9.304893000000448,
+      "pocket": 0.4478538000003027
+    },
+    "onnx_sample_max_embedding_error": 3.725290298461914e-07,
+    "onnx_sample_embeddings": 18,
+    "cpu_fallback_molecules": 0,
+    "max_padded_tokens": {
+      "molecule": 48,
+      "pocket": 312
+    },
+    "preprocessing": "portable conformer=0, seed=1, max_pocket_atoms=511; identical across backends"
+  },
+  {
+    "suite": "DUD-E",
+    "target": "parp1",
+    "status": "PASS",
+    "backend": "tensorrt",
+    "molecules": 30542,
+    "actives": 508,
+    "pockets": 1,
+    "roc_auc": 0.9608684960194719,
+    "bedroc_alpha_80_5": 0.7526917015266255,
+    "enrichment_factors": {
+      "0.005": 53.83477432967938,
+      "0.01": 47.15454685811333,
+      "0.02": 33.06220601311907,
+      "0.05": 16.053530939522613
+    },
+    "top_1_percent_actives": 240,
+    "seconds": 48.52609250000023,
+    "preprocessing_and_encoder_seconds": {
+      "molecule": 48.14002360000086,
+      "pocket": 0.35903500000131316
+    },
+    "onnx_sample_max_embedding_error": 7.152557373046875e-07,
+    "onnx_sample_embeddings": 71,
+    "cpu_fallback_molecules": 0,
+    "max_padded_tokens": {
+      "molecule": 48,
+      "pocket": 272
+    },
+    "preprocessing": "portable conformer=0, seed=1, max_pocket_atoms=511; identical across backends"
+  },
+  {
+    "suite": "DUD-E",
+    "target": "pde5a",
+    "status": "PASS",
+    "backend": "tensorrt",
+    "molecules": 27927,
+    "actives": 398,
+    "pockets": 1,
+    "roc_auc": 0.8892986491540853,
+    "bedroc_alpha_80_5": 0.45894394516744424,
+    "enrichment_factors": {
+      "0.005": 40.09619526202441,
+      "0.01": 30.072146446518307,
+      "0.02": 19.958437087045244,
+      "0.05": 10.849221051571387
+    },
+    "top_1_percent_actives": 120,
+    "seconds": 48.831826400000864,
+    "preprocessing_and_encoder_seconds": {
+      "molecule": 48.44528689999788,
+      "pocket": 0.3477988999984518
+    },
+    "onnx_sample_max_embedding_error": 5.471520125865936e-07,
+    "onnx_sample_embeddings": 64,
+    "cpu_fallback_molecules": 0,
+    "max_padded_tokens": {
+      "molecule": 56,
+      "pocket": 264
+    },
+    "preprocessing": "portable conformer=0, seed=1, max_pocket_atoms=511; identical across backends"
+  },
+  {
+    "suite": "DUD-E",
+    "target": "pgh1",
+    "status": "PASS",
+    "backend": "tensorrt",
+    "molecules": 10992,
+    "actives": 195,
+    "pockets": 1,
+    "roc_auc": 0.6747681573466514,
+    "bedroc_alpha_80_5": 0.060447739497831304,
+    "enrichment_factors": {
+      "0.005": 3.074685314685315,
+      "0.01": 3.074685314685315,
+      "0.02": 2.5622377622377623,
+      "0.05": 2.5622377622377623
+    },
+    "top_1_percent_actives": 6,
+    "seconds": 17.76801720000003,
+    "preprocessing_and_encoder_seconds": {
+      "molecule": 17.203554099996836,
+      "pocket": 0.5491825999997673
+    },
+    "onnx_sample_max_embedding_error": 5.736947059631348e-07,
+    "onnx_sample_embeddings": 33,
+    "cpu_fallback_molecules": 0,
+    "max_padded_tokens": {
+      "molecule": 48,
+      "pocket": 352
+    },
+    "preprocessing": "portable conformer=0, seed=1, max_pocket_atoms=511; identical across backends"
+  },
+  {
+    "suite": "DUD-E",
+    "target": "pgh2",
+    "status": "PASS",
+    "backend": "tensorrt",
+    "molecules": 23563,
+    "actives": 435,
+    "pockets": 1,
+    "roc_auc": 0.7078570235809111,
+    "bedroc_alpha_80_5": 0.058341817972128875,
+    "enrichment_factors": {
+      "0.005": 2.2952464445743233,
+      "0.01": 2.2952464445743233,
+      "0.02": 2.2952464445743233,
+      "0.05": 2.6647441334464235
+    },
+    "top_1_percent_actives": 10,
+    "seconds": 38.053810900000826,
+    "preprocessing_and_encoder_seconds": {
+      "molecule": 37.631900100001076,
+      "pocket": 0.39726230000087526
+    },
+    "onnx_sample_max_embedding_error": 5.584442988038063e-07,
+    "onnx_sample_embeddings": 52,
+    "cpu_fallback_molecules": 0,
+    "max_padded_tokens": {
+      "molecule": 48,
+      "pocket": 288
+    },
+    "preprocessing": "portable conformer=0, seed=1, max_pocket_atoms=511; identical across backends"
+  },
+  {
+    "suite": "DUD-E",
+    "target": "plk1",
+    "status": "PASS",
+    "backend": "tensorrt",
+    "molecules": 6907,
+    "actives": 107,
+    "pockets": 1,
+    "roc_auc": 0.8917743265530511,
+    "bedroc_alpha_80_5": 0.583403985870881,
+    "enrichment_factors": {
+      "0.005": 49.79679572763685,
+      "0.01": 38.730841121495324,
+      "0.02": 25.541921602904594,
+      "0.05": 12.872967424774458
+    },
+    "top_1_percent_actives": 42,
+    "seconds": 12.64240019999852,
+    "preprocessing_and_encoder_seconds": {
+      "molecule": 12.30299340000056,
+      "pocket": 0.33330500000010943
+    },
+    "onnx_sample_max_embedding_error": 5.532056093215942e-07,
+    "onnx_sample_embeddings": 20,
+    "cpu_fallback_molecules": 0,
+    "max_padded_tokens": {
+      "molecule": 56,
+      "pocket": 256
+    },
+    "preprocessing": "portable conformer=0, seed=1, max_pocket_atoms=511; identical across backends"
+  },
+  {
+    "suite": "DUD-E",
+    "target": "pnph",
+    "status": "PASS",
+    "backend": "tensorrt",
+    "molecules": 7049,
+    "actives": 103,
+    "pockets": 1,
+    "roc_auc": 0.9821018732580601,
+    "bedroc_alpha_80_5": 0.7993750532110891,
+    "enrichment_factors": {
+      "0.005": 68.4368932038835,
+      "0.01": 60.7256939696431,
+      "0.02": 33.97576258348826,
+      "0.05": 16.673010808878132
+    },
+    "top_1_percent_actives": 63,
+    "seconds": 10.316067200001271,
+    "preprocessing_and_encoder_seconds": {
+      "molecule": 10.033806300001743,
+      "pocket": 0.27179180000166525
+    },
+    "onnx_sample_max_embedding_error": 4.0978193283081055e-07,
+    "onnx_sample_embeddings": 18,
+    "cpu_fallback_molecules": 0,
+    "max_padded_tokens": {
+      "molecule": 40,
+      "pocket": 232
+    },
+    "preprocessing": "portable conformer=0, seed=1, max_pocket_atoms=511; identical across backends"
+  },
+  {
+    "suite": "DUD-E",
+    "target": "ppara",
+    "status": "PASS",
+    "backend": "tensorrt",
+    "molecules": 19772,
+    "actives": 373,
+    "pockets": 1,
+    "roc_auc": 0.9744269728947361,
+    "bedroc_alpha_80_5": 0.8654040188601596,
+    "enrichment_factors": {
+      "0.005": 53.00804289544236,
+      "0.01": 51.66945595363826,
+      "0.02": 36.007988734530294,
+      "0.05": 17.419225420645873
+    },
+    "top_1_percent_actives": 193,
+    "seconds": 35.56673579999915,
+    "preprocessing_and_encoder_seconds": {
+      "molecule": 35.05342180000298,
+      "pocket": 0.49031250000189175
+    },
+    "onnx_sample_max_embedding_error": 4.3958425521850586e-07,
+    "onnx_sample_embeddings": 45,
+    "cpu_fallback_molecules": 0,
+    "max_padded_tokens": {
+      "molecule": 56,
+      "pocket": 320
+    },
+    "preprocessing": "portable conformer=0, seed=1, max_pocket_atoms=511; identical across backends"
+  },
+  {
+    "suite": "DUD-E",
+    "target": "ppard",
+    "status": "PASS",
+    "backend": "tensorrt",
+    "molecules": 12489,
+    "actives": 240,
+    "pockets": 1,
+    "roc_auc": 0.9083193866165945,
+    "bedroc_alpha_80_5": 0.6920287932960167,
+    "enrichment_factors": {
+      "0.005": 47.08154761904762,
+      "0.01": 40.381099999999996,
+      "0.02": 28.7247,
+      "0.05": 13.238339999999999
+    },
+    "top_1_percent_actives": 97,
+    "seconds": 22.898852199999965,
+    "preprocessing_and_encoder_seconds": {
+      "molecule": 22.34776680000141,
+      "pocket": 0.5353910999983782
+    },
+    "onnx_sample_max_embedding_error": 6.41215592622757e-07,
+    "onnx_sample_embeddings": 34,
+    "cpu_fallback_molecules": 0,
+    "max_padded_tokens": {
+      "molecule": 56,
+      "pocket": 344
+    },
+    "preprocessing": "portable conformer=0, seed=1, max_pocket_atoms=511; identical across backends"
+  },
+  {
+    "suite": "DUD-E",
+    "target": "pparg",
+    "status": "PASS",
+    "backend": "tensorrt",
+    "molecules": 25783,
+    "actives": 484,
+    "pockets": 1,
+    "roc_auc": 0.922088270565034,
+    "bedroc_alpha_80_5": 0.7538756644010504,
+    "enrichment_factors": {
+      "0.005": 52.85771029534243,
+      "0.01": 47.489349093471716,
+      "0.02": 30.042175187391887,
+      "0.05": 14.246804728041514
+    },
+    "top_1_percent_actives": 230,
+    "seconds": 46.133589799999754,
+    "preprocessing_and_encoder_seconds": {
+      "molecule": 45.66390970000066,
+      "pocket": 0.4445494999999937
+    },
+    "onnx_sample_max_embedding_error": 6.92903995513916e-07,
+    "onnx_sample_embeddings": 64,
+    "cpu_fallback_molecules": 0,
+    "max_padded_tokens": {
+      "molecule": 48,
+      "pocket": 312
+    },
+    "preprocessing": "portable conformer=0, seed=1, max_pocket_atoms=511; identical across backends"
+  },
+  {
+    "suite": "DUD-E",
+    "target": "prgr",
+    "status": "PASS",
+    "backend": "tensorrt",
+    "molecules": 15941,
+    "actives": 293,
+    "pockets": 1,
+    "roc_auc": 0.8504055954549579,
+    "bedroc_alpha_80_5": 0.40937748384460565,
+    "enrichment_factors": {
+      "0.005": 31.283532423208193,
+      "0.01": 23.80268771331058,
+      "0.02": 16.373008655461284,
+      "0.05": 8.72679993499106
+    },
+    "top_1_percent_actives": 70,
+    "seconds": 25.973250499999267,
+    "preprocessing_and_encoder_seconds": {
+      "molecule": 25.41588430000047,
+      "pocket": 0.5354004000000714
+    },
+    "onnx_sample_max_embedding_error": 5.513429641723633e-07,
+    "onnx_sample_embeddings": 38,
+    "cpu_fallback_molecules": 0,
+    "max_padded_tokens": {
+      "molecule": 48,
+      "pocket": 344
+    },
+    "preprocessing": "portable conformer=0, seed=1, max_pocket_atoms=511; identical across backends"
+  },
+  {
+    "suite": "DUD-E",
+    "target": "ptn1",
+    "status": "PASS",
+    "backend": "tensorrt",
+    "molecules": 7379,
+    "actives": 130,
+    "pockets": 1,
+    "roc_auc": 0.7316393773146429,
+    "bedroc_alpha_80_5": 0.49156210021179436,
+    "enrichment_factors": {
+      "0.005": 41.420582120582125,
+      "0.01": 29.14781704781705,
+      "0.02": 18.79267151767152,
+      "0.05": 9.690994371482176
+    },
+    "top_1_percent_actives": 38,
+    "seconds": 13.254654800002754,
+    "preprocessing_and_encoder_seconds": {
+      "molecule": 13.065815300000395,
+      "pocket": 0.17641309999817167
+    },
+    "onnx_sample_max_embedding_error": 4.2188912630081177e-07,
+    "onnx_sample_embeddings": 20,
+    "cpu_fallback_molecules": 0,
+    "max_padded_tokens": {
+      "molecule": 56,
+      "pocket": 176
+    },
+    "preprocessing": "portable conformer=0, seed=1, max_pocket_atoms=511; identical across backends"
+  },
+  {
+    "suite": "DUD-E",
+    "target": "pur2",
+    "status": "PASS",
+    "backend": "tensorrt",
+    "molecules": 2750,
+    "actives": 50,
+    "pockets": 1,
+    "roc_auc": 1.0,
+    "bedroc_alpha_80_5": 0.9999999999999993,
+    "enrichment_factors": {
+      "0.005": 55.0,
+      "0.01": 55.0,
+      "0.02": 50.0,
+      "0.05": 19.92753623188406
+    },
+    "top_1_percent_actives": 28,
+    "seconds": 5.149020600001677,
+    "preprocessing_and_encoder_seconds": {
+      "molecule": 4.798544599998422,
+      "pocket": 0.347668699996575
+    },
+    "onnx_sample_max_embedding_error": 2.2957101464271545e-07,
+    "onnx_sample_embeddings": 15,
+    "cpu_fallback_molecules": 0,
+    "max_padded_tokens": {
+      "molecule": 48,
+      "pocket": 264
+    },
+    "preprocessing": "portable conformer=0, seed=1, max_pocket_atoms=511; identical across backends"
+  },
+  {
+    "suite": "DUD-E",
+    "target": "pygm",
+    "status": "PASS",
+    "backend": "tensorrt",
+    "molecules": 4025,
+    "actives": 77,
+    "pockets": 1,
+    "roc_auc": 0.32251740154475717,
+    "bedroc_alpha_80_5": 0.018733884302572338,
+    "enrichment_factors": {
+      "0.005": 0.0,
+      "0.01": 1.2749445676274944,
+      "0.02": 0.6453423120089787,
+      "0.05": 0.5175517551755175
+    },
+    "top_1_percent_actives": 1,
+    "seconds": 6.786711799999466,
+    "preprocessing_and_encoder_seconds": {
+      "molecule": 6.535265099999378,
+      "pocket": 0.2478902000002563
+    },
+    "onnx_sample_max_embedding_error": 3.3527612686157227e-07,
+    "onnx_sample_embeddings": 10,
+    "cpu_fallback_molecules": 0,
+    "max_padded_tokens": {
+      "molecule": 48,
+      "pocket": 216
+    },
+    "preprocessing": "portable conformer=0, seed=1, max_pocket_atoms=511; identical across backends"
+  },
+  {
+    "suite": "DUD-E",
+    "target": "pyrd",
+    "status": "PASS",
+    "backend": "tensorrt",
+    "molecules": 6560,
+    "actives": 111,
+    "pockets": 1,
+    "roc_auc": 0.7686365230170471,
+    "bedroc_alpha_80_5": 0.09115741539418167,
+    "enrichment_factors": {
+      "0.005": 1.790881790881791,
+      "0.01": 3.581763581763582,
+      "0.02": 4.0294840294840295,
+      "0.05": 3.963963963963964
+    },
+    "top_1_percent_actives": 4,
+    "seconds": 11.170643999997992,
+    "preprocessing_and_encoder_seconds": {
+      "molecule": 10.644499400001223,
+      "pocket": 0.5184240999988106
+    },
+    "onnx_sample_max_embedding_error": 3.8743019104003906e-07,
+    "onnx_sample_embeddings": 25,
+    "cpu_fallback_molecules": 0,
+    "max_padded_tokens": {
+      "molecule": 48,
+      "pocket": 336
+    },
+    "preprocessing": "portable conformer=0, seed=1, max_pocket_atoms=511; identical across backends"
+  },
+  {
+    "suite": "DUD-E",
+    "target": "reni",
+    "status": "PASS",
+    "backend": "tensorrt",
+    "molecules": 7062,
+    "actives": 104,
+    "pockets": 1,
+    "roc_auc": 0.6211803789771596,
+    "bedroc_alpha_80_5": 0.3447859174890374,
+    "enrichment_factors": {
+      "0.005": 33.95192307692308,
+      "0.01": 24.86619718309859,
+      "0.02": 13.389490790899242,
+      "0.05": 6.138200782268579
+    },
+    "top_1_percent_actives": 26,
+    "seconds": 13.497822900000756,
+    "preprocessing_and_encoder_seconds": {
+      "molecule": 13.047399900002347,
+      "pocket": 0.4416390999977011
+    },
+    "onnx_sample_max_embedding_error": 4.76837158203125e-07,
+    "onnx_sample_embeddings": 23,
+    "cpu_fallback_molecules": 0,
+    "max_padded_tokens": {
+      "molecule": 48,
+      "pocket": 304
+    },
+    "preprocessing": "portable conformer=0, seed=1, max_pocket_atoms=511; identical across backends"
+  },
+  {
+    "suite": "DUD-E",
+    "target": "rock1",
+    "status": "PASS",
+    "backend": "tensorrt",
+    "molecules": 6400,
+    "actives": 100,
+    "pockets": 1,
+    "roc_auc": 0.8431126984126984,
+    "bedroc_alpha_80_5": 0.4828333226833313,
+    "enrichment_factors": {
+      "0.005": 36.0,
+      "0.01": 31.0,
+      "0.02": 21.0,
+      "0.05": 12.0
+    },
+    "top_1_percent_actives": 31,
+    "seconds": 10.649708299999475,
+    "preprocessing_and_encoder_seconds": {
+      "molecule": 10.422819999999774,
+      "pocket": 0.21943850000025122
+    },
+    "onnx_sample_max_embedding_error": 4.3213367462158203e-07,
+    "onnx_sample_embeddings": 25,
+    "cpu_fallback_molecules": 0,
+    "max_padded_tokens": {
+      "molecule": 48,
+      "pocket": 200
+    },
+    "preprocessing": "portable conformer=0, seed=1, max_pocket_atoms=511; identical across backends"
+  },
+  {
+    "suite": "DUD-E",
+    "target": "rxra",
+    "status": "PASS",
+    "backend": "tensorrt",
+    "molecules": 7081,
+    "actives": 131,
+    "pockets": 1,
+    "roc_auc": 0.9824691086825197,
+    "bedroc_alpha_80_5": 0.8528597919722889,
+    "enrichment_factors": {
+      "0.005": 52.5519508057676,
+      "0.01": 49.485539189334474,
+      "0.02": 38.44645737017525,
+      "0.05": 17.662530910654766
+    },
+    "top_1_percent_actives": 65,
+    "seconds": 12.476511299999402,
+    "preprocessing_and_encoder_seconds": {
+      "molecule": 11.875925599997572,
+      "pocket": 0.5943689999985509
+    },
+    "onnx_sample_max_embedding_error": 5.085021257400513e-07,
+    "onnx_sample_embeddings": 18,
+    "cpu_fallback_molecules": 0,
+    "max_padded_tokens": {
+      "molecule": 48,
+      "pocket": 368
+    },
+    "preprocessing": "portable conformer=0, seed=1, max_pocket_atoms=511; identical across backends"
+  },
+  {
+    "suite": "DUD-E",
+    "target": "sahh",
+    "status": "PASS",
+    "backend": "tensorrt",
+    "molecules": 3512,
+    "actives": 63,
+    "pockets": 1,
+    "roc_auc": 0.8853866084947558,
+    "bedroc_alpha_80_5": 0.03564209069591431,
+    "enrichment_factors": {
+      "0.005": 0.0,
+      "0.01": 0.0,
+      "0.02": 1.570310753409345,
+      "0.05": 3.484126984126984
+    },
+    "top_1_percent_actives": 0,
+    "seconds": 5.517527399999381,
+    "preprocessing_and_encoder_seconds": {
+      "molecule": 5.015810199998668,
+      "pocket": 0.49617529999886756
+    },
+    "onnx_sample_max_embedding_error": 3.25031578540802e-07,
+    "onnx_sample_embeddings": 17,
+    "cpu_fallback_molecules": 0,
+    "max_padded_tokens": {
+      "molecule": 32,
+      "pocket": 328
+    },
+    "preprocessing": "portable conformer=0, seed=1, max_pocket_atoms=511; identical across backends"
+  },
+  {
+    "suite": "DUD-E",
+    "target": "src",
+    "status": "PASS",
+    "backend": "tensorrt",
+    "molecules": 35020,
+    "actives": 524,
+    "pockets": 1,
+    "roc_auc": 0.5358774864039995,
+    "bedroc_alpha_80_5": 0.14851722987076604,
+    "enrichment_factors": {
+      "0.005": 16.708015267175572,
+      "0.01": 8.949022422304866,
+      "0.02": 5.529614182574512,
+      "0.05": 2.480916030534351
+    },
+    "top_1_percent_actives": 47,
+    "seconds": 62.909020999999484,
+    "preprocessing_and_encoder_seconds": {
+      "molecule": 62.43734770000083,
+      "pocket": 0.4384027000014612
+    },
+    "onnx_sample_max_embedding_error": 6.705522537231445e-07,
+    "onnx_sample_embeddings": 77,
+    "cpu_fallback_molecules": 0,
+    "max_padded_tokens": {
+      "molecule": 56,
+      "pocket": 304
+    },
+    "preprocessing": "portable conformer=0, seed=1, max_pocket_atoms=511; identical across backends"
+  },
+  {
+    "suite": "DUD-E",
+    "target": "tgfr1",
+    "status": "PASS",
+    "backend": "tensorrt",
+    "molecules": 8628,
+    "actives": 133,
+    "pockets": 1,
+    "roc_auc": 0.900609381015812,
+    "bedroc_alpha_80_5": 0.6736941848331056,
+    "enrichment_factors": {
+      "0.005": 61.92344497607655,
+      "0.01": 43.99377754731657,
+      "0.02": 28.873745056282324,
+      "0.05": 13.815371762740183
+    },
+    "top_1_percent_actives": 59,
+    "seconds": 14.563792900000408,
+    "preprocessing_and_encoder_seconds": {
+      "molecule": 14.06568519999928,
+      "pocket": 0.48888260000239825
+    },
+    "onnx_sample_max_embedding_error": 4.917383193969727e-07,
+    "onnx_sample_embeddings": 29,
+    "cpu_fallback_molecules": 0,
+    "max_padded_tokens": {
+      "molecule": 48,
+      "pocket": 320
+    },
+    "preprocessing": "portable conformer=0, seed=1, max_pocket_atoms=511; identical across backends"
+  },
+  {
+    "suite": "DUD-E",
+    "target": "thb",
+    "status": "PASS",
+    "backend": "tensorrt",
+    "molecules": 7553,
+    "actives": 103,
+    "pockets": 1,
+    "roc_auc": 0.9323476901023001,
+    "bedroc_alpha_80_5": 0.702450579012044,
+    "enrichment_factors": {
+      "0.005": 67.5408788962698,
+      "0.01": 49.208354624425134,
+      "0.02": 31.35826520183955,
+      "0.05": 15.519597267170083
+    },
+    "top_1_percent_actives": 51,
+    "seconds": 13.600870199999918,
+    "preprocessing_and_encoder_seconds": {
+      "molecule": 13.022046400001273,
+      "pocket": 0.5689581999977236
+    },
+    "onnx_sample_max_embedding_error": 4.023313522338867e-07,
+    "onnx_sample_embeddings": 18,
+    "cpu_fallback_molecules": 0,
+    "max_padded_tokens": {
+      "molecule": 48,
+      "pocket": 360
+    },
+    "preprocessing": "portable conformer=0, seed=1, max_pocket_atoms=511; identical across backends"
+  },
+  {
+    "suite": "DUD-E",
+    "target": "thrb",
+    "status": "PASS",
+    "backend": "tensorrt",
+    "molecules": 27461,
+    "actives": 461,
+    "pockets": 1,
+    "roc_auc": 0.9635448702498594,
+    "bedroc_alpha_80_5": 0.66241588696567,
+    "enrichment_factors": {
+      "0.005": 52.23020214404728,
+      "0.01": 40.723076316308415,
+      "0.02": 27.50973772431473,
+      "0.05": 15.13052916418014
+    },
+    "top_1_percent_actives": 188,
+    "seconds": 47.88424909999958,
+    "preprocessing_and_encoder_seconds": {
+      "molecule": 47.32603399999789,
+      "pocket": 0.5333820000014384
+    },
+    "onnx_sample_max_embedding_error": 6.235204637050629e-07,
+    "onnx_sample_embeddings": 62,
+    "cpu_fallback_molecules": 0,
+    "max_padded_tokens": {
+      "molecule": 56,
+      "pocket": 344
+    },
+    "preprocessing": "portable conformer=0, seed=1, max_pocket_atoms=511; identical across backends"
+  },
+  {
+    "suite": "DUD-E",
+    "target": "try1",
+    "status": "PASS",
+    "backend": "tensorrt",
+    "molecules": 26424,
+    "actives": 449,
+    "pockets": 1,
+    "roc_auc": 0.8830594776972033,
+    "bedroc_alpha_80_5": 0.38530855388883206,
+    "enrichment_factors": {
+      "0.005": 27.434197967078052,
+      "0.01": 20.875370845064506,
+      "0.02": 16.79861570134851,
+      "0.05": 10.14975622411882
+    },
+    "top_1_percent_actives": 94,
+    "seconds": 45.98425789999965,
+    "preprocessing_and_encoder_seconds": {
+      "molecule": 45.51836600000024,
+      "pocket": 0.4351438000012422
+    },
+    "onnx_sample_max_embedding_error": 6.742775440216064e-07,
+    "onnx_sample_embeddings": 65,
+    "cpu_fallback_molecules": 0,
+    "max_padded_tokens": {
+      "molecule": 56,
+      "pocket": 304
+    },
+    "preprocessing": "portable conformer=0, seed=1, max_pocket_atoms=511; identical across backends"
+  },
+  {
+    "suite": "DUD-E",
+    "target": "tryb1",
+    "status": "PASS",
+    "backend": "tensorrt",
+    "molecules": 7796,
+    "actives": 148,
+    "pockets": 1,
+    "roc_auc": 0.914769273719326,
+    "bedroc_alpha_80_5": 0.37344252314068044,
+    "enrichment_factors": {
+      "0.005": 25.662508662508664,
+      "0.01": 18.233887733887734,
+      "0.02": 13.506583506583507,
+      "0.05": 10.94033264033264
+    },
+    "top_1_percent_actives": 27,
+    "seconds": 14.232218700002704,
+    "preprocessing_and_encoder_seconds": {
+      "molecule": 13.871115300000383,
+      "pocket": 0.3489673000003677
+    },
+    "onnx_sample_max_embedding_error": 3.5762786865234375e-07,
+    "onnx_sample_embeddings": 21,
+    "cpu_fallback_molecules": 0,
+    "max_padded_tokens": {
+      "molecule": 48,
+      "pocket": 264
+    },
+    "preprocessing": "portable conformer=0, seed=1, max_pocket_atoms=511; identical across backends"
+  },
+  {
+    "suite": "DUD-E",
+    "target": "tysy",
+    "status": "PASS",
+    "backend": "tensorrt",
+    "molecules": 6852,
+    "actives": 109,
+    "pockets": 1,
+    "roc_auc": 0.8636765004006873,
+    "bedroc_alpha_80_5": 0.48697268973704455,
+    "enrichment_factors": {
+      "0.005": 35.921363040629096,
+      "0.01": 30.975668129238134,
+      "0.02": 21.409652971679296,
+      "0.05": 11.179607885093748
+    },
+    "top_1_percent_actives": 34,
+    "seconds": 12.350176599997212,
+    "preprocessing_and_encoder_seconds": {
+      "molecule": 11.809827900000528,
+      "pocket": 0.529384299999947
+    },
+    "onnx_sample_max_embedding_error": 4.284083843231201e-07,
+    "onnx_sample_embeddings": 21,
+    "cpu_fallback_molecules": 0,
+    "max_padded_tokens": {
+      "molecule": 56,
+      "pocket": 328
+    },
+    "preprocessing": "portable conformer=0, seed=1, max_pocket_atoms=511; identical across backends"
+  },
+  {
+    "suite": "DUD-E",
+    "target": "urok",
+    "status": "PASS",
+    "backend": "tensorrt",
+    "molecules": 10005,
+    "actives": 162,
+    "pockets": 1,
+    "roc_auc": 0.9635882114631819,
+    "bedroc_alpha_80_5": 0.7097957802495617,
+    "enrichment_factors": {
+      "0.005": 55.70442992011619,
+      "0.01": 44.63788045471214,
+      "0.02": 30.418739635157547,
+      "0.05": 15.90208471944999
+    },
+    "top_1_percent_actives": 73,
+    "seconds": 16.74748399999953,
+    "preprocessing_and_encoder_seconds": {
+      "molecule": 16.462237600000662,
+      "pocket": 0.2747650999990583
+    },
+    "onnx_sample_max_embedding_error": 4.149042069911957e-07,
+    "onnx_sample_embeddings": 30,
+    "cpu_fallback_molecules": 0,
+    "max_padded_tokens": {
+      "molecule": 48,
+      "pocket": 232
+    },
+    "preprocessing": "portable conformer=0, seed=1, max_pocket_atoms=511; identical across backends"
+  },
+  {
+    "suite": "DUD-E",
+    "target": "vgfr2",
+    "status": "PASS",
+    "backend": "tensorrt",
+    "molecules": 25353,
+    "actives": 409,
+    "pockets": 1,
+    "roc_auc": 0.5913914650479666,
+    "bedroc_alpha_80_5": 0.3979404300247368,
+    "enrichment_factors": {
+      "0.005": 38.07123192730493,
+      "0.01": 25.380821284869953,
+      "0.02": 14.886827869010261,
+      "0.05": 7.772915011607907
+    },
+    "top_1_percent_actives": 104,
+    "seconds": 43.911494299998594,
+    "preprocessing_and_encoder_seconds": {
+      "molecule": 43.483178799997404,
+      "pocket": 0.4006015999984811
+    },
+    "onnx_sample_max_embedding_error": 5.513429641723633e-07,
+    "onnx_sample_embeddings": 58,
+    "cpu_fallback_molecules": 0,
+    "max_padded_tokens": {
+      "molecule": 48,
+      "pocket": 288
+    },
+    "preprocessing": "portable conformer=0, seed=1, max_pocket_atoms=511; identical across backends"
+  },
+  {
+    "suite": "DUD-E",
+    "target": "wee1",
+    "status": "PASS",
+    "backend": "tensorrt",
+    "molecules": 6250,
+    "actives": 102,
+    "pockets": 1,
+    "roc_auc": 0.9779682855575542,
+    "bedroc_alpha_80_5": 0.8952604999415794,
+    "enrichment_factors": {
+      "0.005": 61.27450980392157,
+      "0.01": 61.27450980392157,
+      "0.02": 40.68627450980392,
+      "0.05": 17.2273382196329
+    },
+    "top_1_percent_actives": 63,
+    "seconds": 11.415654700002051,
+    "preprocessing_and_encoder_seconds": {
+      "molecule": 11.040216600002168,
+      "pocket": 0.3693898999990779
+    },
+    "onnx_sample_max_embedding_error": 4.172325134277344e-07,
+    "onnx_sample_embeddings": 19,
+    "cpu_fallback_molecules": 0,
+    "max_padded_tokens": {
+      "molecule": 48,
+      "pocket": 272
+    },
+    "preprocessing": "portable conformer=0, seed=1, max_pocket_atoms=511; identical across backends"
+  },
+  {
+    "suite": "DUD-E",
+    "target": "xiap",
+    "status": "PASS",
+    "backend": "tensorrt",
+    "molecules": 5250,
+    "actives": 100,
+    "pockets": 1,
+    "roc_auc": 0.9460582524271844,
+    "bedroc_alpha_80_5": 0.8436008464841352,
+    "enrichment_factors": {
+      "0.005": 52.5,
+      "0.01": 51.50943396226415,
+      "0.02": 34.0,
+      "0.05": 15.96958174904943
+    },
+    "top_1_percent_actives": 52,
+    "seconds": 9.443529599997419,
+    "preprocessing_and_encoder_seconds": {
+      "molecule": 9.329887100000633,
+      "pocket": 0.10474790000080247
+    },
+    "onnx_sample_max_embedding_error": 4.3958425521850586e-07,
+    "onnx_sample_embeddings": 19,
+    "cpu_fallback_molecules": 0,
+    "max_padded_tokens": {
+      "molecule": 48,
+      "pocket": 120
+    },
+    "preprocessing": "portable conformer=0, seed=1, max_pocket_atoms=511; identical across backends"
+  },
+  {
+    "suite": "LIT-PCBA",
+    "target": "ADRB2",
+    "status": "PASS",
+    "backend": "tensorrt",
+    "molecules": 312418,
+    "actives": 17,
+    "pockets": 8,
+    "roc_auc": 0.5205784722011698,
+    "bedroc_alpha_80_5": 0.11697017425245712,
+    "enrichment_factors": {
+      "0.005": 23.515712619020736,
+      "0.01": 11.761618823529412,
+      "0.02": 5.881750491843401,
+      "0.05": 2.3529261137910127
+    },
+    "top_1_percent_actives": 2,
+    "seconds": 502.49743730000046,
+    "preprocessing_and_encoder_seconds": {
+      "molecule": 497.59265999999843,
+      "pocket": 4.5281868999991275
+    },
+    "onnx_sample_max_embedding_error": 7.972121238708496e-07,
+    "onnx_sample_embeddings": 626,
+    "cpu_fallback_molecules": 0,
+    "max_padded_tokens": {
+      "molecule": 64,
+      "pocket": 424
+    },
+    "preprocessing": "portable conformer=0, seed=1, max_pocket_atoms=511; identical across backends"
+  },
+  {
+    "suite": "LIT-PCBA",
+    "target": "ALDH1",
+    "status": "PASS",
+    "backend": "tensorrt",
+    "molecules": 144976,
+    "actives": 7166,
+    "pockets": 8,
+    "roc_auc": 0.5361587377873847,
+    "bedroc_alpha_80_5": 0.06079712250997608,
+    "enrichment_factors": {
+      "0.005": 1.0603882317841917,
+      "0.01": 1.227817952592222,
+      "0.02": 1.2417704293262244,
+      "0.05": 1.2531052528172635
+    },
+    "top_1_percent_actives": 88,
+    "seconds": 230.3195005000016,
+    "preprocessing_and_encoder_seconds": {
+      "molecule": 226.74873389999993,
+      "pocket": 3.3889273999993748
+    },
+    "onnx_sample_max_embedding_error": 6.109476089477539e-07,
+    "onnx_sample_embeddings": 304,
+    "cpu_fallback_molecules": 0,
+    "max_padded_tokens": {
+      "molecule": 64,
+      "pocket": 344
+    },
+    "preprocessing": "portable conformer=0, seed=1, max_pocket_atoms=511; identical across backends"
+  },
+  {
+    "suite": "LIT-PCBA",
+    "target": "ESR1_ago",
+    "status": "PASS",
+    "backend": "tensorrt",
+    "molecules": 5595,
+    "actives": 13,
+    "pockets": 15,
+    "roc_auc": 0.7081691150125403,
+    "bedroc_alpha_80_5": 0.12420487464557417,
+    "enrichment_factors": {
+      "0.005": 30.741758241758244,
+      "0.01": 15.370879120879122,
+      "0.02": 7.685439560439561,
+      "0.05": 4.611263736263736
+    },
+    "top_1_percent_actives": 2,
+    "seconds": 16.238538800000242,
+    "preprocessing_and_encoder_seconds": {
+      "molecule": 8.675435600001947,
+      "pocket": 7.551491399997758
+    },
+    "onnx_sample_max_embedding_error": 2.2724270820617676e-07,
+    "onnx_sample_embeddings": 34,
+    "cpu_fallback_molecules": 0,
+    "max_padded_tokens": {
+      "molecule": 56,
+      "pocket": 368
+    },
+    "preprocessing": "portable conformer=0, seed=1, max_pocket_atoms=511; identical across backends"
+  },
+  {
+    "suite": "LIT-PCBA",
+    "target": "ESR1_ant",
+    "status": "PASS",
+    "backend": "tensorrt",
+    "molecules": 5049,
+    "actives": 102,
+    "pockets": 15,
+    "roc_auc": 0.5737127274600966,
+    "bedroc_alpha_80_5": 0.08105732422966792,
+    "enrichment_factors": {
+      "0.005": 7.615384615384615,
+      "0.01": 3.8823529411764706,
+      "0.02": 2.4504950495049505,
+      "0.05": 1.9565217391304348
+    },
+    "top_1_percent_actives": 4,
+    "seconds": 15.830452099999093,
+    "preprocessing_and_encoder_seconds": {
+      "molecule": 7.611840800000209,
+      "pocket": 8.20758200000273
+    },
+    "onnx_sample_max_embedding_error": 2.980232238769531e-07,
+    "onnx_sample_embeddings": 32,
+    "cpu_fallback_molecules": 0,
+    "max_padded_tokens": {
+      "molecule": 56,
+      "pocket": 424
+    },
+    "preprocessing": "portable conformer=0, seed=1, max_pocket_atoms=511; identical across backends"
+  },
+  {
+    "suite": "LIT-PCBA",
+    "target": "FEN1",
+    "status": "PASS",
+    "backend": "tensorrt",
+    "molecules": 355678,
+    "actives": 369,
+    "pockets": 1,
+    "roc_auc": 0.5837537868580378,
+    "bedroc_alpha_80_5": 0.0181533155371776,
+    "enrichment_factors": {
+      "0.005": 0.0,
+      "0.01": 0.8129578456313099,
+      "0.02": 1.6259156912626198,
+      "0.05": 2.0596090148935677
+    },
+    "top_1_percent_actives": 3,
+    "seconds": 566.769627499998,
+    "preprocessing_and_encoder_seconds": {
+      "molecule": 566.1659295999998,
+      "pocket": 0.25554030000057537
+    },
+    "onnx_sample_max_embedding_error": 7.003545761108398e-07,
+    "onnx_sample_embeddings": 703,
+    "cpu_fallback_molecules": 0,
+    "max_padded_tokens": {
+      "molecule": 64,
+      "pocket": 216
+    },
+    "preprocessing": "portable conformer=0, seed=1, max_pocket_atoms=511; identical across backends"
+  },
+  {
+    "suite": "LIT-PCBA",
+    "target": "GBA",
+    "status": "PASS",
+    "backend": "tensorrt",
+    "molecules": 296037,
+    "actives": 166,
+    "pockets": 6,
+    "roc_auc": 0.565225287656909,
+    "bedroc_alpha_80_5": 0.04323118113967689,
+    "enrichment_factors": {
+      "0.005": 7.22493756253915,
+      "0.01": 3.613688797744168,
+      "0.02": 3.0119159292125435,
+      "0.05": 2.0481720151786718
+    },
+    "top_1_percent_actives": 6,
+    "seconds": 468.5051798000022,
+    "preprocessing_and_encoder_seconds": {
+      "molecule": 466.4134320999983,
+      "pocket": 1.7179326000004949
+    },
+    "onnx_sample_max_embedding_error": 8.493661880493164e-07,
+    "onnx_sample_embeddings": 595,
+    "cpu_fallback_molecules": 0,
+    "max_padded_tokens": {
+      "molecule": 56,
+      "pocket": 272
+    },
+    "preprocessing": "portable conformer=0, seed=1, max_pocket_atoms=511; identical across backends"
+  },
+  {
+    "suite": "LIT-PCBA",
+    "target": "IDH1",
+    "status": "PASS",
+    "backend": "tensorrt",
+    "molecules": 361997,
+    "actives": 39,
+    "pockets": 14,
+    "roc_auc": 0.6167501938530622,
+    "bedroc_alpha_80_5": 0.038006152357307435,
+    "enrichment_factors": {
+      "0.005": 5.128162629267602,
+      "0.01": 5.128162629267602,
+      "0.02": 2.564081314633801,
+      "0.05": 2.564081314633801
+    },
+    "top_1_percent_actives": 2,
+    "seconds": 586.1868173000003,
+    "preprocessing_and_encoder_seconds": {
+      "molecule": 580.8857588999999,
+      "pocket": 4.829686300003232
+    },
+    "onnx_sample_max_embedding_error": 5.885958671569824e-07,
+    "onnx_sample_embeddings": 731,
+    "cpu_fallback_molecules": 0,
+    "max_padded_tokens": {
+      "molecule": 64,
+      "pocket": 368
+    },
+    "preprocessing": "portable conformer=0, seed=1, max_pocket_atoms=511; identical across backends"
+  },
+  {
+    "suite": "LIT-PCBA",
+    "target": "KAT2A",
+    "status": "PASS",
+    "backend": "tensorrt",
+    "molecules": 348606,
+    "actives": 194,
+    "pockets": 3,
+    "roc_auc": 0.5434639695438189,
+    "bedroc_alpha_80_5": 0.01268229922923814,
+    "enrichment_factors": {
+      "0.005": 0.0,
+      "0.01": 0.5153249625264975,
+      "0.02": 1.2884971635808813,
+      "0.05": 1.5463296520537235
+    },
+    "top_1_percent_actives": 1,
+    "seconds": 557.8007576000018,
+    "preprocessing_and_encoder_seconds": {
+      "molecule": 556.138465699998,
+      "pocket": 1.2766905999997107
+    },
+    "onnx_sample_max_embedding_error": 1.1064112186431885e-06,
+    "onnx_sample_embeddings": 697,
+    "cpu_fallback_molecules": 0,
+    "max_padded_tokens": {
+      "molecule": 64,
+      "pocket": 352
+    },
+    "preprocessing": "portable conformer=0, seed=1, max_pocket_atoms=511; identical across backends"
+  },
+  {
+    "suite": "LIT-PCBA",
+    "target": "MAPK1",
+    "status": "PASS",
+    "backend": "tensorrt",
+    "molecules": 62808,
+    "actives": 308,
+    "pockets": 15,
+    "roc_auc": 0.5376383896103896,
+    "bedroc_alpha_80_5": 0.03369498497910769,
+    "enrichment_factors": {
+      "0.005": 3.884230055658627,
+      "0.01": 2.917803976627506,
+      "0.02": 1.7845209682918515,
+      "0.05": 1.8178345055135885
+    },
+    "top_1_percent_actives": 9,
+    "seconds": 104.74684309999793,
+    "preprocessing_and_encoder_seconds": {
+      "molecule": 99.4865893999995,
+      "pocket": 5.170155100000557
+    },
+    "onnx_sample_max_embedding_error": 5.234032869338989e-07,
+    "onnx_sample_embeddings": 151,
+    "cpu_fallback_molecules": 0,
+    "max_padded_tokens": {
+      "molecule": 64,
+      "pocket": 376
+    },
+    "preprocessing": "portable conformer=0, seed=1, max_pocket_atoms=511; identical across backends"
+  },
+  {
+    "suite": "LIT-PCBA",
+    "target": "MTORC1",
+    "status": "PASS",
+    "backend": "tensorrt",
+    "molecules": 33069,
+    "actives": 97,
+    "pockets": 11,
+    "roc_auc": 0.48394545324930494,
+    "bedroc_alpha_80_5": 0.017222704101014463,
+    "enrichment_factors": {
+      "0.005": 2.0537200347782885,
+      "0.01": 1.0299623135141869,
+      "0.02": 1.5449434702712805,
+      "0.05": 1.0305850234981737
+    },
+    "top_1_percent_actives": 1,
+    "seconds": 63.8731403999991,
+    "preprocessing_and_encoder_seconds": {
+      "molecule": 54.41430099999707,
+      "pocket": 9.420463300000847
+    },
+    "onnx_sample_max_embedding_error": 6.258487701416016e-07,
+    "onnx_sample_embeddings": 88,
+    "cpu_fallback_molecules": 0,
+    "max_padded_tokens": {
+      "molecule": 56,
+      "pocket": 496
+    },
+    "preprocessing": "portable conformer=0, seed=1, max_pocket_atoms=511; identical across backends"
+  },
+  {
+    "suite": "LIT-PCBA",
+    "target": "OPRK1",
+    "status": "PASS",
+    "backend": "tensorrt",
+    "molecules": 269769,
+    "actives": 24,
+    "pockets": 1,
+    "roc_auc": 0.5803589192261828,
+    "bedroc_alpha_80_5": 0.023883797080492108,
+    "enrichment_factors": {
+      "0.005": 0.0,
+      "0.01": 4.166187916975537,
+      "0.02": 2.0830939584877686,
+      "0.05": 1.6665987100600488
+    },
+    "top_1_percent_actives": 1,
+    "seconds": 436.8291061000018,
+    "preprocessing_and_encoder_seconds": {
+      "molecule": 435.97768650000216,
+      "pocket": 0.563433499999519
+    },
+    "onnx_sample_max_embedding_error": 7.748603820800781e-07,
+    "onnx_sample_embeddings": 530,
+    "cpu_fallback_molecules": 0,
+    "max_padded_tokens": {
+      "molecule": 56,
+      "pocket": 352
+    },
+    "preprocessing": "portable conformer=0, seed=1, max_pocket_atoms=511; identical across backends"
+  },
+  {
+    "suite": "LIT-PCBA",
+    "target": "PKM2",
+    "status": "PASS",
+    "backend": "tensorrt",
+    "molecules": 246003,
+    "actives": 546,
+    "pockets": 9,
+    "roc_auc": 0.5930718735140691,
+    "bedroc_alpha_80_5": 0.008967295472794071,
+    "enrichment_factors": {
+      "0.005": 1.0980217994840253,
+      "0.01": 0.5492339842197623,
+      "0.02": 0.5493455944583764,
+      "0.05": 0.8424326263119857
+    },
+    "top_1_percent_actives": 3,
+    "seconds": 391.9395313999994,
+    "preprocessing_and_encoder_seconds": {
+      "molecule": 385.8630204000001,
+      "pocket": 5.802215099996829
+    },
+    "onnx_sample_max_embedding_error": 6.891787052154541e-07,
+    "onnx_sample_embeddings": 500,
+    "cpu_fallback_molecules": 0,
+    "max_padded_tokens": {
+      "molecule": 56,
+      "pocket": 432
+    },
+    "preprocessing": "portable conformer=0, seed=1, max_pocket_atoms=511; identical across backends"
+  },
+  {
+    "suite": "LIT-PCBA",
+    "target": "PPARG",
+    "status": "PASS",
+    "backend": "tensorrt",
+    "molecules": 5237,
+    "actives": 27,
+    "pockets": 15,
+    "roc_auc": 0.8062628847657638,
+    "bedroc_alpha_80_5": 0.32638011071377965,
+    "enrichment_factors": {
+      "0.005": 43.10288065843621,
+      "0.01": 29.277428371767996,
+      "0.02": 16.625396825396827,
+      "0.05": 8.883799830364715
+    },
+    "top_1_percent_actives": 8,
+    "seconds": 17.837161800001923,
+    "preprocessing_and_encoder_seconds": {
+      "molecule": 8.290542099999584,
+      "pocket": 9.5220115000011
+    },
+    "onnx_sample_max_embedding_error": 3.9674341678619385e-07,
+    "onnx_sample_embeddings": 36,
+    "cpu_fallback_molecules": 0,
+    "max_padded_tokens": {
+      "molecule": 56,
+      "pocket": 520
+    },
+    "preprocessing": "portable conformer=0, seed=1, max_pocket_atoms=511; identical across backends"
+  },
+  {
+    "suite": "LIT-PCBA",
+    "target": "TP53",
+    "status": "PASS",
+    "backend": "tensorrt",
+    "molecules": 4247,
+    "actives": 79,
+    "pockets": 6,
+    "roc_auc": 0.39365934546514736,
+    "bedroc_alpha_80_5": 0.000100740093881105,
+    "enrichment_factors": {
+      "0.005": 0.0,
+      "0.01": 0.0,
+      "0.02": 0.0,
+      "0.05": 0.0
+    },
+    "top_1_percent_actives": 0,
+    "seconds": 7.599190000000817,
+    "preprocessing_and_encoder_seconds": {
+      "molecule": 6.336559999999736,
+      "pocket": 1.2574929000002157
+    },
+    "onnx_sample_max_embedding_error": 4.6100467443466187e-07,
+    "onnx_sample_embeddings": 29,
+    "cpu_fallback_molecules": 0,
+    "max_padded_tokens": {
+      "molecule": 56,
+      "pocket": 224
+    },
+    "preprocessing": "portable conformer=0, seed=1, max_pocket_atoms=511; identical across backends"
+  },
+  {
+    "suite": "LIT-PCBA",
+    "target": "VDR",
+    "status": "PASS",
+    "backend": "tensorrt",
+    "molecules": 356123,
+    "actives": 882,
+    "pockets": 2,
+    "roc_auc": 0.5341372128828693,
+    "bedroc_alpha_80_5": 0.02776928037920641,
+    "enrichment_factors": {
+      "0.005": 2.947208567125147,
+      "0.01": 2.3804376888318495,
+      "0.02": 1.9839765659644923,
+      "0.05": 1.4285032370897481
+    },
+    "top_1_percent_actives": 21,
+    "seconds": 578.7843224999997,
+    "preprocessing_and_encoder_seconds": {
+      "molecule": 576.5982795999989,
+      "pocket": 1.8423886000018683
+    },
+    "onnx_sample_max_embedding_error": 7.599592208862305e-07,
+    "onnx_sample_embeddings": 701,
+    "cpu_fallback_molecules": 0,
+    "max_padded_tokens": {
+      "molecule": 64,
+      "pocket": 432
+    },
+    "preprocessing": "portable conformer=0, seed=1, max_pocket_atoms=511; identical across backends"
+  }
+]

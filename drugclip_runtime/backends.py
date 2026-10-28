@@ -5,6 +5,7 @@ Use a .engine model for NVIDIA TensorRT instead of ONNX Runtime CPU.
 from pathlib import Path
 import argparse
 import numpy as np
+from collections import OrderedDict
 
 NAMES = ('tokens','distances','edge_types')
 
@@ -69,6 +70,71 @@ class TensorRTEncoder:
         self.buffers.clear()
         self.check(self.cuda.cudaStreamDestroy(self.stream))
         self.stream=None
+
+class CudaGraphEncoder:
+    """Bounded shape-specific graph cache; each graph owns its context and buffers.
+
+    Copies remain outside capture so caller-owned NumPy addresses may change.
+    Precision and engine tactics are unchanged. Capture errors are explicit.
+    """
+    def __init__(self, path, max_graphs=16):
+        if max_graphs < 1: raise ValueError('max_graphs must be positive')
+        self.owner=TensorRTEncoder(path)
+        self.max_graphs=max_graphs
+        self.cache=OrderedDict()
+        self.captures=0
+        self.hits=0
+        self.evictions=0
+
+    def _destroy(self, entry):
+        encoder,graph,instance=entry
+        encoder.synchronize()
+        encoder.check(encoder.cuda.cudaGraphExecDestroy(instance))
+        encoder.check(encoder.cuda.cudaGraphDestroy(graph))
+        encoder.close()
+
+    def __call__(self, inputs):
+        key=tuple(tuple(inputs[k].shape) for k in NAMES)
+        if key in self.cache:
+            encoder,graph,instance=self.cache.pop(key)
+            self.hits+=1
+            for k in NAMES:
+                a=np.ascontiguousarray(inputs[k],dtype=encoder.trt.nptype(encoder.engine.get_tensor_dtype(k)))
+                encoder.host[k]=a
+                encoder.check(encoder.cuda.cudaMemcpyAsync(encoder.buffers[k][0],a.ctypes.data,a.nbytes,encoder.cuda.cudaMemcpyKind.cudaMemcpyHostToDevice,encoder.stream))
+        else:
+            if len(self.cache)>=self.max_graphs:
+                self._destroy(self.cache.popitem(last=False)[1]);self.evictions+=1
+            encoder=object.__new__(TensorRTEncoder)
+            for attr in ('cuda','trt','logger','runtime','engine'):
+                setattr(encoder,attr,getattr(self.owner,attr))
+            encoder.context=encoder.engine.create_execution_context()
+            if encoder.context is None: raise RuntimeError('Cannot create graph context')
+            c=encoder.cuda
+            encoder.stream=encoder.check(c.cudaStreamCreateWithFlags(1))
+            encoder.buffers={}
+            encoder.prepare(inputs)
+            encoder.check(c.cudaDeviceSynchronize())
+            encoder.enqueue();encoder.synchronize()
+            encoder.check(c.cudaStreamBeginCapture(encoder.stream,c.cudaStreamCaptureMode.cudaStreamCaptureModeThreadLocal))
+            try:
+                encoder.enqueue()
+            finally:
+                result=c.cudaStreamEndCapture(encoder.stream)
+            graph=encoder.check(result)
+            instance=encoder.check(c.cudaGraphInstantiate(graph,0))
+            self.captures+=1
+        self.cache[key]=(encoder,graph,instance)
+        encoder.check(encoder.cuda.cudaGraphLaunch(instance,encoder.stream))
+        encoder.synchronize()
+        a=encoder.host['embedding']
+        encoder.check(encoder.cuda.cudaMemcpy(a.ctypes.data,encoder.buffers['embedding'][0],a.nbytes,encoder.cuda.cudaMemcpyKind.cudaMemcpyDeviceToHost))
+        return a.copy()
+
+    def close(self):
+        for entry in self.cache.values(): self._destroy(entry)
+        self.cache.clear()
+        self.owner.close()
 
 if __name__=='__main__':
     p=argparse.ArgumentParser(description=__doc__)

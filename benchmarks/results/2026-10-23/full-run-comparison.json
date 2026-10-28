@@ -1,0 +1,11 @@
+{
+  "targets": 117,
+  "molecules": 4241148,
+  "graph_seconds": 6839.52782300004,
+  "baseline_seconds": 7031.024006199994,
+  "pytorch_seconds": 10381.37354949,
+  "max_embedding_error": 0.0,
+  "max_score_error": 0.0,
+  "all_scores_bitwise_equal": true,
+  "cpu_fallback_molecules": 0
+}

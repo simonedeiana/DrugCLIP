@@ -81,13 +81,35 @@ the inputs; equivalence for other conformer/cropping cases is not claimed.
 
 ## Validation
 
+### Optional CUDA Graph replay
+
+Add `--cuda-graphs` to a `python -m drugclip_runtime --backend tensorrt`
+screening command to enable molecule graph replay with the existing FP32 engines.
+Pockets retain ordinary TensorRT execution. The default remains unchanged.
+
+Each cached input shape owns a separate execution context and fixed device
+buffers. The cache holds at most 16 shapes and evicts the least recently used.
+Input copies are ordered on the graph's CUDA stream. Graph capture errors are
+reported rather than silently falling back. No precision, padding, or batching
+changes are introduced. Cold capture costs extra time and memory; this option
+is primarily useful for repeated shapes in large screens.
+
+On native Windows / RTX 3050, six alternating warm measurements of 363 AMPC
+molecule batches averaged 3.150 seconds without graphs and 2.911 seconds with
+graphs (7.57% lower elapsed time, including transfers but excluding preprocessing).
+All prepared molecule and pocket outputs were bitwise identical to ordinary
+TensorRT. Shape eviction/recreation also passed. Full-dataset validation is complete: 117 targets / 4,241,148 records with
+exactly matching embeddings and scores. Full-run time fell from 117.2 to
+114.0 minutes (2.7%); these were single runs. See the
+[benchmark history](docs/benchmark-history.md) and [results](benchmarks/README.md).
+
 ```sh
 python -m unittest discover -s tests
 ```
 
-See `VALIDATION.md` for measured results. Validation covers the available AMPC
-dataset, not all DUD-E/PCBA targets, training, or HomoAug. Training datasets and
-those additional benchmarks were not downloaded or executed.
+See `VALIDATION.md` for measured results. Validation includes AMPC and the full standard DUD-E/LIT-PCBA target sets.
+Full TensorRT and graph runs used Windows; PyTorch used WSL. ONNX checks were
+sampled on the full datasets. Training and HomoAug remain outside this scope.
 
 ## Attribution and license
 

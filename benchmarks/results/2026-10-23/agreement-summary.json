@@ -1,0 +1,18 @@
+{
+  "targets": 117,
+  "labels_and_counts_match": true,
+  "max_score_error": 0.007515370845794678,
+  "min_spearman": 0.99997097162661,
+  "min_top1_overlap_fraction": 0.9714285714285714,
+  "max_abs_auc_delta": 0.0019357469974616848,
+  "max_abs_bedroc_delta": 0.0018962158721528288,
+  "max_abs_ef1_delta": 0.4441568264907332,
+  "targets_with_changed_top1_active_count": 3,
+  "max_molecule_embedding_error": 0.0047495365142822266,
+  "max_pocket_embedding_error": 0.0018877387046813965,
+  "sampled_onnx_embeddings": 9483,
+  "max_onnx_error": 1.1064112186431885e-06,
+  "cpu_fallback_molecules": 0,
+  "tensorrt_seconds": 7031.024006199994,
+  "pytorch_seconds": 10381.37354949
+}
