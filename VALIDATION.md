@@ -89,3 +89,8 @@ Six alternating graph microbenchmark runs reduced warm molecule time from
 3.150046 to 2.911473 seconds (7.57%). All 363 molecule batches and the pocket
 matched bitwise. An 18-batch eviction/recreation test passed. The full graph
 run was on Windows, not Linux. Model weights and preprocessing were unchanged.
+
+
+Separate [molecule and receptor/pocket timings](docs/encoder-performance.md)
+are available. Full-run pocket timers include CPU ONNX checks for TensorRT,
+so they are not an isolated comparison of GPU pocket encoder speed.

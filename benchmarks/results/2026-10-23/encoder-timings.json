@@ -1,0 +1,21 @@
+{
+  "scope": "Preprocessing, encoding and validation; TensorRT includes ONNX checks, all pockets checked",
+  "records": {
+    "molecule": 4241148,
+    "pocket": 231
+  },
+  "seconds": {
+    "wsl-pytorch": {
+      "molecule": 10366.14105042,
+      "pocket": 8.666340305004354
+    },
+    "windows-tensorrt": {
+      "molecule": 6920.787812100001,
+      "pocket": 105.371400299995
+    },
+    "windows-cuda-graphs": {
+      "molecule": 6727.218936500009,
+      "pocket": 107.55034779998095
+    }
+  }
+}

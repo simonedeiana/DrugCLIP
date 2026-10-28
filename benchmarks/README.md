@@ -9,6 +9,9 @@ Archives were SHA256-verified. DUD-E uses `pocket.lmdb`; LIT-PCBA uses
 `pockets.lmdb`. The counts are molecule records, not necessarily unique compounds
 across targets. Every backend completed 117 targets and 4,241,148 records.
 
+See the [molecule versus receptor breakdown](../docs/encoder-performance.md)
+for separate encoder timings and the important pocket-validation overhead.
+
 ## Published evidence
 
 Files in [results/2026-10-23](results/2026-10-23):
@@ -19,6 +22,7 @@ Files in [results/2026-10-23](results/2026-10-23):
 | wsl-pytorch.json | All 117 original-model FP16 target metrics and timings |
 | windows-cuda-graphs.json | All 117 graph target metrics, timings, cache counters and baseline agreement |
 | backend-comparisons.json | Per-target FP32/FP16 embedding, score, ranking and screening metric differences |
+| encoder-timings.json | Separate molecule/pocket stage totals for all three deployments |
 | agreement-summary.json | Worst-case full TensorRT/PyTorch comparison and ONNX sample coverage |
 | full-run-comparison.json | CUDA Graph aggregate timing and exact output agreement |
 | prepared-input-results.json | All six alternating timing samples per encoder, plus cold capture time |
