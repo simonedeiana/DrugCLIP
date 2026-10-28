@@ -1,0 +1,69 @@
+{
+  "metadata": {
+    "tensorrt": "10.13.3.9",
+    "precision": "FP32 TF32 disabled",
+    "platform": "Windows-10-10.0.19045-SP0"
+  },
+  "timings": {
+    "tensorrt-molecule": {
+      "seconds": [
+        4.982007299999168,
+        4.998750900000232,
+        5.04697600000145,
+        5.000089900000603,
+        5.0126808999993955,
+        5.01522870000008
+      ],
+      "records": 4434,
+      "batches": 555,
+      "unique_shapes": 6,
+      "passes_per_measurement": 1,
+      "graph_captures_before_timing": 0
+    },
+    "cuda-graphs-molecule": {
+      "seconds": [
+        4.599347800000032,
+        4.621840499999962,
+        4.607524600000033,
+        4.620186599999215,
+        4.630945799999608,
+        4.626280599999518
+      ],
+      "records": 4434,
+      "batches": 555,
+      "unique_shapes": 6,
+      "passes_per_measurement": 1,
+      "graph_captures_before_timing": 6
+    },
+    "tensorrt-pocket": {
+      "seconds": [
+        0.19118868999994448,
+        0.1895735500000228,
+        0.19079271999999037,
+        0.18937860000005458,
+        0.19080530000010185,
+        0.1907269900000756
+      ],
+      "records": 9,
+      "batches": 9,
+      "unique_shapes": 8,
+      "passes_per_measurement": 10,
+      "graph_captures_before_timing": 0
+    },
+    "cuda-graphs-pocket": {
+      "seconds": [
+        0.1816630699999223,
+        0.1855828700001439,
+        0.18196287999999186,
+        0.18436356999991405,
+        0.18254023999998026,
+        0.1839474299998983
+      ],
+      "records": 9,
+      "batches": 9,
+      "unique_shapes": 8,
+      "passes_per_measurement": 10,
+      "graph_captures_before_timing": 8
+    }
+  }
+}

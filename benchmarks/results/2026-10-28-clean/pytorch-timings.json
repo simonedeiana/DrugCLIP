@@ -1,0 +1,42 @@
+{
+  "metadata": {
+    "torch": "1.11.0+cu113",
+    "cuda": "11.3",
+    "precision": "FP16",
+    "platform": "Linux-6.18.54.1-microsoft-standard-WSL2-x86_64-with-glibc2.43",
+    "glibc_tunable": "glibc.rtld.execstack=2",
+    "gpu": "NVIDIA GeForce RTX 3050"
+  },
+  "timings": {
+    "pytorch-molecule": {
+      "seconds": [
+        10.251169888999996,
+        8.745909237999996,
+        8.771272592000003,
+        8.844785723000001,
+        8.76083904699999,
+        8.859953344000019
+      ],
+      "records": 4434,
+      "batches": 555,
+      "unique_shapes": 6,
+      "passes_per_measurement": 1,
+      "graph_captures_before_timing": 0
+    },
+    "pytorch-pocket": {
+      "seconds": [
+        0.18633189479999998,
+        0.18712299489999965,
+        0.18611765830000024,
+        0.1865850284000004,
+        0.18868794839999908,
+        0.19032135829999958
+      ],
+      "records": 9,
+      "batches": 9,
+      "unique_shapes": 8,
+      "passes_per_measurement": 10,
+      "graph_captures_before_timing": 0
+    }
+  }
+}

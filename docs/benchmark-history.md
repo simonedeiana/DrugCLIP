@@ -1,6 +1,6 @@
 # DrugCLIP benchmark history: what improved and what stayed the same
 
-Published 28 October 2026. Measurements were performed on 23 October 2026.
+Published 28 October 2026. Initial measurements were performed on 23 October 2026; a clean subset follow-up was performed on 28 October 2026.
 
 ## What this project achieved
 
@@ -184,3 +184,37 @@ as part of the full suite.
 - [Migration from an older installation](linux-migration.md)
 - [Complete per-target results and methodology](../benchmarks/README.md)
 - [Detailed validation history](../VALIDATION.md)
+
+
+
+## Clean inference follow-up: 28 October 2026
+
+A new limited-data benchmark removes preprocessing and validation from the
+inference timer and separates molecules from receptors. It uses 4,434 molecule
+records and nine pockets, with six measurements per encoder. Transfers and
+synchronization remain included; graph capture, scoring and disk I/O are excluded.
+
+| Encoder / workload | PyTorch FP16 (WSL) | TensorRT FP32 (Windows) | TensorRT + CUDA Graphs (Windows) |
+|---|---:|---:|---:|
+| 4,434 molecules | 9.039 s | 5.009 s | 4.618 s |
+| Nine receptor pockets | 187.53 ms | 190.41 ms | 183.34 ms |
+
+Graphs reduced molecule time by 7.82% relative to ordinary TensorRT and pocket
+time by 3.71%. Against PyTorch, graph time was 48.91% lower for molecules but only
+2.23% lower for pockets. Ordinary TensorRT was 1.54% slower on pockets in this
+experiment. These small receptor differences are specific to this subset and
+machine; they do not establish a general advantage. OS and precision differ
+between PyTorch and TensorRT. The first PyTorch molecule measurement was slower
+than subsequent passes; all six measurements are retained and reported with
+standard deviations, rather than discarding the slower result.
+
+Both encoders and all predictions matched ordinary TensorRT exactly with graphs.
+PyTorch maximum embedding differences were 0.002155 (molecule) and 0.001194
+(pocket); maximum screening-score difference was 0.003511. Ranking correlation
+was at least 0.999946, and top-1% sets matched on all four targets. The sampled
+LIT-PCBA targets are not full-target accuracy evaluations. This follow-up enables
+graphs for both encoders; the full dataset run enabled them only for molecules.
+
+See the [clean benchmark report](../benchmarks/results/2026-10-28-clean/REPORT.md)
+for every timing sample, per-target prediction differences, exact selection
+manifest, platform changes, and [reproduction scripts](../benchmarks/clean/README.md).

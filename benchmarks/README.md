@@ -2,6 +2,10 @@
 
 Start with the [plain-language benchmark history](../docs/benchmark-history.md).
 
+**New:** [clean receptor + molecule benchmark](results/2026-10-28-clean/REPORT.md),
+with preprocessing and validation outside the timer, plus
+[reproduction scripts](clean/README.md).
+
 All full runs used the official checkpoint, batch size 8, first conformer,
 seed 1 and maximum 511 pocket atoms. Data came from the authors'
 [THU-ATOM/DrugCLIP_data](https://huggingface.co/datasets/THU-ATOM/DrugCLIP_data).

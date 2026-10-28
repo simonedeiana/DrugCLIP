@@ -1,0 +1,282 @@
+{
+  "timings": {
+    "pytorch-molecule": {
+      "seconds": [
+        10.251169888999996,
+        8.745909237999996,
+        8.771272592000003,
+        8.844785723000001,
+        8.76083904699999,
+        8.859953344000019
+      ],
+      "records": 4434,
+      "batches": 555,
+      "unique_shapes": 6,
+      "passes_per_measurement": 1,
+      "graph_captures_before_timing": 0,
+      "mean_seconds": 9.0389883055,
+      "std_seconds": 0.5956654102650443,
+      "min_seconds": 8.745909237999996,
+      "max_seconds": 10.251169888999996
+    },
+    "pytorch-pocket": {
+      "seconds": [
+        0.18633189479999998,
+        0.18712299489999965,
+        0.18611765830000024,
+        0.1865850284000004,
+        0.18868794839999908,
+        0.19032135829999958
+      ],
+      "records": 9,
+      "batches": 9,
+      "unique_shapes": 8,
+      "passes_per_measurement": 10,
+      "graph_captures_before_timing": 0,
+      "mean_seconds": 0.18752781384999984,
+      "std_seconds": 0.001650532435584555,
+      "min_seconds": 0.18611765830000024,
+      "max_seconds": 0.19032135829999958
+    },
+    "tensorrt-molecule": {
+      "seconds": [
+        4.982007299999168,
+        4.998750900000232,
+        5.04697600000145,
+        5.000089900000603,
+        5.0126808999993955,
+        5.01522870000008
+      ],
+      "records": 4434,
+      "batches": 555,
+      "unique_shapes": 6,
+      "passes_per_measurement": 1,
+      "graph_captures_before_timing": 0,
+      "mean_seconds": 5.009288950000155,
+      "std_seconds": 0.021941108167686404,
+      "min_seconds": 4.982007299999168,
+      "max_seconds": 5.04697600000145
+    },
+    "cuda-graphs-molecule": {
+      "seconds": [
+        4.599347800000032,
+        4.621840499999962,
+        4.607524600000033,
+        4.620186599999215,
+        4.630945799999608,
+        4.626280599999518
+      ],
+      "records": 4434,
+      "batches": 555,
+      "unique_shapes": 6,
+      "passes_per_measurement": 1,
+      "graph_captures_before_timing": 6,
+      "mean_seconds": 4.617687649999728,
+      "std_seconds": 0.011939396372097144,
+      "min_seconds": 4.599347800000032,
+      "max_seconds": 4.630945799999608
+    },
+    "tensorrt-pocket": {
+      "seconds": [
+        0.19118868999994448,
+        0.1895735500000228,
+        0.19079271999999037,
+        0.18937860000005458,
+        0.19080530000010185,
+        0.1907269900000756
+      ],
+      "records": 9,
+      "batches": 9,
+      "unique_shapes": 8,
+      "passes_per_measurement": 10,
+      "graph_captures_before_timing": 0,
+      "mean_seconds": 0.1904109750000316,
+      "std_seconds": 0.0007447155595572754,
+      "min_seconds": 0.18937860000005458,
+      "max_seconds": 0.19118868999994448
+    },
+    "cuda-graphs-pocket": {
+      "seconds": [
+        0.1816630699999223,
+        0.1855828700001439,
+        0.18196287999999186,
+        0.18436356999991405,
+        0.18254023999998026,
+        0.1839474299998983
+      ],
+      "records": 9,
+      "batches": 9,
+      "unique_shapes": 8,
+      "passes_per_measurement": 10,
+      "graph_captures_before_timing": 8,
+      "mean_seconds": 0.1833433433333084,
+      "std_seconds": 0.0015359189625103861,
+      "min_seconds": 0.1816630699999223,
+      "max_seconds": 0.1855828700001439
+    }
+  },
+  "embedding_comparisons": [
+    {
+      "backend": "pytorch",
+      "reference": "tensorrt",
+      "encoders": {
+        "molecule": {
+          "max_absolute_error": 0.002154722809791565,
+          "mean_absolute_error": 0.00016905959846405175,
+          "min_cosine_similarity": 0.9999578453464015,
+          "bitwise_equal": false
+        },
+        "pocket": {
+          "max_absolute_error": 0.0011938847601413727,
+          "mean_absolute_error": 0.00018416844841458632,
+          "min_cosine_similarity": 0.9999884271545559,
+          "bitwise_equal": false
+        }
+      }
+    },
+    {
+      "backend": "cuda-graphs",
+      "reference": "tensorrt",
+      "encoders": {
+        "molecule": {
+          "max_absolute_error": 0.0,
+          "mean_absolute_error": 0.0,
+          "min_cosine_similarity": 0.9999999999999998,
+          "bitwise_equal": true
+        },
+        "pocket": {
+          "max_absolute_error": 0.0,
+          "mean_absolute_error": 0.0,
+          "min_cosine_similarity": 0.9999999999999998,
+          "bitwise_equal": true
+        }
+      }
+    }
+  ],
+  "prediction_comparisons": [
+    {
+      "target": "ampc",
+      "molecules": 2898,
+      "pockets": 1,
+      "actives": 48,
+      "top1_count": 29,
+      "comparisons": {
+        "pytorch": {
+          "max_score_error": 0.002821151167154312,
+          "mean_score_error": 0.00046287404256872833,
+          "spearman": 0.9999906124319456,
+          "top1_overlap": 29,
+          "top1_actives": 16,
+          "reference_top1_actives": 16,
+          "auc": 0.7712938596491228,
+          "reference_auc": 0.7713450292397661,
+          "bitwise_equal": false
+        },
+        "cuda-graphs": {
+          "max_score_error": 0.0,
+          "mean_score_error": 0.0,
+          "spearman": 0.9999999999999999,
+          "top1_overlap": 29,
+          "top1_actives": 16,
+          "reference_top1_actives": 16,
+          "auc": 0.7713450292397661,
+          "reference_auc": 0.7713450292397661,
+          "bitwise_equal": true
+        }
+      }
+    },
+    {
+      "target": "GBA",
+      "molecules": 512,
+      "pockets": 3,
+      "actives": 1,
+      "top1_count": 6,
+      "comparisons": {
+        "pytorch": {
+          "max_score_error": 0.002056960016489029,
+          "mean_score_error": 0.0004214578657411039,
+          "spearman": 0.9999603925624564,
+          "top1_overlap": 6,
+          "top1_actives": 0,
+          "reference_top1_actives": 0,
+          "auc": 0.1643835616438356,
+          "reference_auc": 0.16046966731898238,
+          "bitwise_equal": false
+        },
+        "cuda-graphs": {
+          "max_score_error": 0.0,
+          "mean_score_error": 0.0,
+          "spearman": 1.0,
+          "top1_overlap": 6,
+          "top1_actives": 0,
+          "reference_top1_actives": 0,
+          "auc": 0.16046966731898238,
+          "reference_auc": 0.16046966731898238,
+          "bitwise_equal": true
+        }
+      }
+    },
+    {
+      "target": "IDH1",
+      "molecules": 512,
+      "pockets": 3,
+      "actives": 1,
+      "top1_count": 6,
+      "comparisons": {
+        "pytorch": {
+          "max_score_error": 0.003510698676109314,
+          "mean_score_error": 0.0009184443624690175,
+          "spearman": 0.9999459979858322,
+          "top1_overlap": 6,
+          "top1_actives": 0,
+          "reference_top1_actives": 0,
+          "auc": 0.6731898238747553,
+          "reference_auc": 0.6731898238747553,
+          "bitwise_equal": false
+        },
+        "cuda-graphs": {
+          "max_score_error": 0.0,
+          "mean_score_error": 0.0,
+          "spearman": 1.0,
+          "top1_overlap": 6,
+          "top1_actives": 0,
+          "reference_top1_actives": 0,
+          "auc": 0.6731898238747553,
+          "reference_auc": 0.6731898238747553,
+          "bitwise_equal": true
+        }
+      }
+    },
+    {
+      "target": "VDR",
+      "molecules": 512,
+      "pockets": 2,
+      "actives": 2,
+      "top1_count": 6,
+      "comparisons": {
+        "pytorch": {
+          "max_score_error": 0.002021968364715576,
+          "mean_score_error": 0.000400031654862687,
+          "spearman": 0.9999814032798893,
+          "top1_overlap": 6,
+          "top1_actives": 0,
+          "reference_top1_actives": 0,
+          "auc": 0.37745098039215685,
+          "reference_auc": 0.38235294117647056,
+          "bitwise_equal": false
+        },
+        "cuda-graphs": {
+          "max_score_error": 0.0,
+          "mean_score_error": 0.0,
+          "spearman": 1.0,
+          "top1_overlap": 6,
+          "top1_actives": 0,
+          "reference_top1_actives": 0,
+          "auc": 0.38235294117647056,
+          "reference_auc": 0.38235294117647056,
+          "bitwise_equal": true
+        }
+      }
+    }
+  ]
+}

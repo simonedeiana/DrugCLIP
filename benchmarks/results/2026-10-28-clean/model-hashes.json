@@ -1,0 +1,5 @@
+{
+  "checkpoint_best.pt": "dc2c76d0f02f9bb079a613f09d538dcda1bf9075f2952d91dc1bea55571f667e",
+  "molecule-fp32.engine": "cee1918a5254240905a50c187b3c6dd636a6fee3db1ddbe7482b2ec16effa387",
+  "pocket-fp32.engine": "3deed459cd1b7bc86a6fd743efd52efa386e440f31b1b7f76b7fc6965499318d"
+}

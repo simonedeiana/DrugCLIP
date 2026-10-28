@@ -94,3 +94,8 @@ run was on Windows, not Linux. Model weights and preprocessing were unchanged.
 Separate [molecule and receptor/pocket timings](docs/encoder-performance.md)
 are available. Full-run pocket timers include CPU ONNX checks for TensorRT,
 so they are not an isolated comparison of GPU pocket encoder speed.
+
+
+A [clean subset benchmark](benchmarks/results/2026-10-28-clean/REPORT.md)
+now reports both encoders without timed preprocessing or validation. Graph
+outputs remained exact; FP16 differences and per-target rankings are quantified.
